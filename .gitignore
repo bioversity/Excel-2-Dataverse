@@ -1,0 +1,4 @@
+
+.~lock.*
+composer.lock
+curl.log

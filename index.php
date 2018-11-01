@@ -41,7 +41,7 @@ function url_open($url) {
 
 function parse_xml($json, $row, $worksheet, $visible) {
     $visible_label = ($visible) ? "visible" : "not visible";
-    $rownr = 0;
+    $rownr = 1;
     $highestRow = $worksheet->getHighestRow(); // e.g. 10
     $highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
     $highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
@@ -74,15 +74,18 @@ function parse_xml($json, $row, $worksheet, $visible) {
                 $doi = substr(parse_url($value)["path"], 1);
                 $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=doi:" . $doi;
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"] = parse_url($value);
+                $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["visible"] = $visible;
                 if($visible) {
-                    $json[$visible_label]["contents"]["row " . $rownr]["dataset"]["doi"] = $doi;
-                    $json[$visible_label]["contents"]["row " . $rownr]["dataset"]["dataset_api_url"] = $dataset_api_url;
-                    // $json[$visible_label]["contents"]["row " . $rownr]["dataset"]["data"] = json_decode(url_open($dataset_api_url), 1)["data"];
+                    // if($row->getRowIndex() == "24") {
+                        $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["doi"] = $doi;
+                        $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["dataset_api_url"] = $dataset_api_url;
+                        // $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = json_decode(url_open($dataset_api_url), 1)["data"];
 
-                    // LOG
-                    // $logger->warning(escapeshellcmd(url_open($dataset_api_url)));
-                    // print $dataset_api_url ."\n";
-                    $json[$visible_label]["contents"]["row " . $rownr]["dataset"]["data"] = url_open($dataset_api_url);
+                        // LOG
+                        // $logger->warning(escapeshellcmd(url_open($dataset_api_url)));
+                        // print $dataset_api_url ."\n";
+                        $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = url_open($dataset_api_url);
+                    // }
                 }
             }
         }
