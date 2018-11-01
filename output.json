@@ -1008,7 +1008,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/AI4CRZ"
+                        "path": "\/10.7910\/DVN\/AI4CRZ",
+                        "doi": "10.7910\/DVN\/AI4CRZ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/AI4CRZ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Maps of Volta basin hydrometeorogical baselines",
@@ -1026,7 +1029,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -1044,7 +1050,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/UFFGSV"
+                        "path": "\/10.7910\/DVN\/UFFGSV",
+                        "doi": "10.7910\/DVN\/UFFGSV",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/UFFGSV",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR in South Africa",
@@ -1062,7 +1071,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/LJWKBN"
+                        "path": "\/10.7910\/DVN\/LJWKBN",
+                        "doi": "10.7910\/DVN\/LJWKBN",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/LJWKBN",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and priority taxa of South Africa",
@@ -1080,7 +1092,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1098,7 +1113,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -1116,7 +1134,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/Z5XN1F"
+                        "path": "\/10.7910\/DVN\/Z5XN1F",
+                        "doi": "10.7910\/DVN\/Z5XN1F",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Z5XN1F",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of Zambia",
@@ -1134,7 +1155,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -1152,7 +1176,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1170,7 +1197,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1188,7 +1218,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -1206,7 +1239,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/B8YOQL"
+                        "path": "\/10.7910\/DVN\/B8YOQL",
+                        "doi": "10.7910\/DVN\/B8YOQL",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/B8YOQL",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and inventory data template v.1",
@@ -1224,7 +1260,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/SYUSY8"
+                        "path": "\/10.7910\/DVN\/SYUSY8",
+                        "doi": "10.7910\/DVN\/SYUSY8",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/SYUSY8",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Interactive toolkit for crop wild relative conservation planning - version 1",
@@ -1242,7 +1281,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -1260,7 +1302,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/YLBPZE"
+                        "path": "\/10.7910\/DVN\/YLBPZE",
+                        "doi": "10.7910\/DVN\/YLBPZE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/YLBPZE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Agricultural land use and cover data",
@@ -1278,7 +1323,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -1296,7 +1344,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/UFFGSV"
+                        "path": "\/10.7910\/DVN\/UFFGSV",
+                        "doi": "10.7910\/DVN\/UFFGSV",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/UFFGSV",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR in South Africa",
@@ -1314,7 +1365,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/LJWKBN"
+                        "path": "\/10.7910\/DVN\/LJWKBN",
+                        "doi": "10.7910\/DVN\/LJWKBN",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/LJWKBN",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and priority taxa of South Africa",
@@ -1332,7 +1386,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -1350,7 +1407,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -1368,7 +1428,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1386,7 +1449,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1404,7 +1470,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -1422,7 +1491,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/B8YOQL"
+                        "path": "\/10.7910\/DVN\/B8YOQL",
+                        "doi": "10.7910\/DVN\/B8YOQL",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/B8YOQL",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and inventory data template v.1",
@@ -1440,7 +1512,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/SYUSY8"
+                        "path": "\/10.7910\/DVN\/SYUSY8",
+                        "doi": "10.7910\/DVN\/SYUSY8",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/SYUSY8",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Interactive toolkit for crop wild relative conservation planning - version 1",
@@ -1458,7 +1533,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/Z5XN1F"
+                        "path": "\/10.7910\/DVN\/Z5XN1F",
+                        "doi": "10.7910\/DVN\/Z5XN1F",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Z5XN1F",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of Zambia",
@@ -1476,7 +1554,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/8YXCFR"
+                        "path": "\/10.7910\/DVN\/8YXCFR",
+                        "doi": "10.7910\/DVN\/8YXCFR",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/8YXCFR",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and priority CWR of Zambia",
@@ -1494,7 +1575,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -1512,7 +1596,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -1530,7 +1617,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/LJWKBN"
+                        "path": "\/10.7910\/DVN\/LJWKBN",
+                        "doi": "10.7910\/DVN\/LJWKBN",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/LJWKBN",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and priority taxa of South Africa",
@@ -1548,7 +1638,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/27480"
+                        "path": "\/10.7910\/DVN\/27480",
+                        "doi": "10.7910\/DVN\/27480",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27480",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1566,7 +1659,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/AI4CRZ"
+                        "path": "\/10.7910\/DVN\/AI4CRZ",
+                        "doi": "10.7910\/DVN\/AI4CRZ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/AI4CRZ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Maps of Volta basin hydrometeorogical baselines",
@@ -1584,7 +1680,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/CG1OUZ"
+                        "path": "\/10.7910\/DVN\/CG1OUZ",
+                        "doi": "10.7910\/DVN\/CG1OUZ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/CG1OUZ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Genotyping of Musa accessions from ITC by DArT markers",
@@ -1602,7 +1701,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -1620,7 +1722,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/XWSNX8"
+                        "path": "\/10.7910\/DVN\/XWSNX8",
+                        "doi": "10.7910\/DVN\/XWSNX8",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/XWSNX8",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Ghana Diet Diversity and Food Security for Agricultural Biodiversity Assessment",
@@ -1638,7 +1743,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/KI92MG"
+                        "path": "\/10.7910\/DVN\/KI92MG",
+                        "doi": "10.7910\/DVN\/KI92MG",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/KI92MG",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Protocol for the Agricultural Biodiversity (ABD) Assessment in Ghana",
@@ -1656,7 +1764,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/3QIG77"
+                        "path": "\/10.7910\/DVN\/3QIG77",
+                        "doi": "10.7910\/DVN\/3QIG77",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/3QIG77",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Protocol for the Agricultural Biodiversity (ABD) Assessment in Mali \/ Protocole pour l\u2019\u00e9valuation de la Biodiversit\u00e9 Agricole (ABD) \u00e1 Mali",
@@ -1674,7 +1785,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -1692,7 +1806,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/Z5XN1F"
+                        "path": "\/10.7910\/DVN\/Z5XN1F",
+                        "doi": "10.7910\/DVN\/Z5XN1F",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Z5XN1F",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of Zambia",
@@ -1710,7 +1827,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/XGR0GJ"
+                        "path": "\/10.7910\/DVN\/XGR0GJ",
+                        "doi": "10.7910\/DVN\/XGR0GJ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/XGR0GJ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Phantom III drone imagery",
@@ -1728,7 +1848,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/27480"
+                        "path": "\/10.7910\/DVN\/27480",
+                        "doi": "10.7910\/DVN\/27480",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27480",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1746,7 +1869,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/27480"
+                        "path": "\/10.7910\/DVN\/27480",
+                        "doi": "10.7910\/DVN\/27480",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27480",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1764,7 +1890,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -1782,7 +1911,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -1800,7 +1932,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/Z5XN1F"
+                        "path": "\/10.7910\/DVN\/Z5XN1F",
+                        "doi": "10.7910\/DVN\/Z5XN1F",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Z5XN1F",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of Zambia",
@@ -1818,7 +1953,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -1836,7 +1974,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1854,7 +1995,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -1872,7 +2016,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -1890,7 +2037,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/XXNOAZ"
+                        "path": "\/10.7910\/DVN\/XXNOAZ",
+                        "doi": "10.7910\/DVN\/XXNOAZ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/XXNOAZ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1908,7 +2058,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/27480"
+                        "path": "\/10.7910\/DVN\/27480",
+                        "doi": "10.7910\/DVN\/27480",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27480",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1926,7 +2079,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/27480"
+                        "path": "\/10.7910\/DVN\/27480",
+                        "doi": "10.7910\/DVN\/27480",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27480",
+                        "data": null
                     },
                     "visible": true,
                     "name": "GPS inventory of timber trees from which local communities gather food resources in Cameroon, Gabon and the DRC.",
@@ -1944,7 +2100,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -1962,7 +2121,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -1980,7 +2142,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/26678"
+                        "path": "\/10.7910\/DVN\/26678",
+                        "doi": "10.7910\/DVN\/26678",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/26678",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Assessing the effectivness of on-farm conservation projects in the High Andes",
@@ -1998,7 +2163,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/25450"
+                        "path": "\/10.7910\/DVN\/25450",
+                        "doi": "10.7910\/DVN\/25450",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/25450",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Fingerprinting data musa accessions with SSR",
@@ -2016,7 +2184,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2034,7 +2205,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -2052,7 +2226,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/XGR0GJ"
+                        "path": "\/10.7910\/DVN\/XGR0GJ",
+                        "doi": "10.7910\/DVN\/XGR0GJ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/XGR0GJ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Phantom III drone imagery",
@@ -2070,7 +2247,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2088,7 +2268,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -2106,7 +2289,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/Z5XN1F"
+                        "path": "\/10.7910\/DVN\/Z5XN1F",
+                        "doi": "10.7910\/DVN\/Z5XN1F",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Z5XN1F",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of Zambia",
@@ -2124,7 +2310,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -2142,7 +2331,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -2160,7 +2352,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -2178,7 +2373,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -2196,7 +2394,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20804"
+                        "path": "\/1902.1\/20804",
+                        "doi": "1902.1\/20804",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20804",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' perceptions of climate change and actions taken to cope with the changes, as well as associated socio-economic information and crop diversity for the household.",
@@ -2214,7 +2415,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -2232,7 +2436,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/B8YOQL"
+                        "path": "\/10.7910\/DVN\/B8YOQL",
+                        "doi": "10.7910\/DVN\/B8YOQL",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/B8YOQL",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and inventory data template v.1",
@@ -2250,7 +2457,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2268,7 +2478,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/YLBPZE"
+                        "path": "\/10.7910\/DVN\/YLBPZE",
+                        "doi": "10.7910\/DVN\/YLBPZE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/YLBPZE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Agricultural land use and cover data",
@@ -2286,7 +2499,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -2304,7 +2520,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -2322,7 +2541,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -2340,7 +2562,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QH9XWB"
+                        "path": "\/10.7910\/DVN\/QH9XWB",
+                        "doi": "10.7910\/DVN\/QH9XWB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QH9XWB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -2358,7 +2583,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VQVDFA"
+                        "path": "\/10.7910\/DVN\/VQVDFA",
+                        "doi": "10.7910\/DVN\/VQVDFA",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VQVDFA",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Template for the Preparation of a Technical Background Document for a National Strategic Action Plan for the Conservation and Sustainable Use of Crop Wild Relatives",
@@ -2376,7 +2604,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -2394,7 +2625,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -2412,7 +2646,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20804"
+                        "path": "\/1902.1\/20804",
+                        "doi": "1902.1\/20804",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20804",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' perceptions of climate change and actions taken to cope with the changes, as well as associated socio-economic information and crop diversity for the household.",
@@ -2430,7 +2667,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20796"
+                        "path": "\/1902.1\/20796",
+                        "doi": "1902.1\/20796",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20796",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' survey: niche market development for neglected and underutlized (NUS) products in Nepal.",
@@ -2448,7 +2688,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2466,7 +2709,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20804"
+                        "path": "\/1902.1\/20804",
+                        "doi": "1902.1\/20804",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20804",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' perceptions of climate change and actions taken to cope with the changes, as well as associated socio-economic information and crop diversity for the household.",
@@ -2484,7 +2730,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20796"
+                        "path": "\/1902.1\/20796",
+                        "doi": "1902.1\/20796",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20796",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' survey: niche market development for neglected and underutlized (NUS) products in Nepal.",
@@ -2502,7 +2751,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5B9IV5"
+                        "path": "\/10.7910\/DVN\/5B9IV5",
+                        "doi": "10.7910\/DVN\/5B9IV5",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5B9IV5",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data collation template v.1",
@@ -2520,7 +2772,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2538,7 +2793,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/VYZZFF"
+                        "path": "\/10.7910\/DVN\/VYZZFF",
+                        "doi": "10.7910\/DVN\/VYZZFF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/VYZZFF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Technical Background Document to the National Strategic Action Plan for the Conservation and Sustainable Use of Cop Wild Relatives in Zambia",
@@ -2556,7 +2814,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -2574,7 +2835,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/MEAPCE"
+                        "path": "\/10.7910\/DVN\/MEAPCE",
+                        "doi": "10.7910\/DVN\/MEAPCE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/MEAPCE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "LACOSREP Upper-East Ghana Reservoir Inventory",
@@ -2592,7 +2856,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5774FJ"
+                        "path": "\/10.7910\/DVN\/5774FJ",
+                        "doi": "10.7910\/DVN\/5774FJ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5774FJ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Agricultural Biodiversity Assessments in dryland systems of Ghana, India, Malawi, Mali and Niger: an overview of the framework, methods and datasets",
@@ -2610,7 +2877,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/QUOPCB"
+                        "path": "\/10.7910\/DVN\/QUOPCB",
+                        "doi": "10.7910\/DVN\/QUOPCB",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QUOPCB",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Occurrence data for priority CWR of the SADC region",
@@ -2628,7 +2898,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -2646,7 +2919,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/20804"
+                        "path": "\/1902.1\/20804",
+                        "doi": "1902.1\/20804",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/20804",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Farmers' perceptions of climate change and actions taken to cope with the changes, as well as associated socio-economic information and crop diversity for the household.",
@@ -2664,7 +2940,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/5774FJ"
+                        "path": "\/10.7910\/DVN\/5774FJ",
+                        "doi": "10.7910\/DVN\/5774FJ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/5774FJ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Agricultural Biodiversity Assessments in dryland systems of Ghana, India, Malawi, Mali and Niger: an overview of the framework, methods and datasets",
@@ -2682,7 +2961,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/IXSOMM"
+                        "path": "\/10.7910\/DVN\/IXSOMM",
+                        "doi": "10.7910\/DVN\/IXSOMM",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/IXSOMM",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Ghana Household Surveys for Agricultural Biodiversity Assessment",
@@ -2700,7 +2982,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/OZWE7N"
+                        "path": "\/10.7910\/DVN\/OZWE7N",
+                        "doi": "10.7910\/DVN\/OZWE7N",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/OZWE7N",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Karnataka Household Surveys for Agricultural Biodiversity Assessment",
@@ -2718,7 +3003,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/JDUSDR"
+                        "path": "\/10.7910\/DVN\/JDUSDR",
+                        "doi": "10.7910\/DVN\/JDUSDR",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/JDUSDR",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Rajasthan Household Surveys for Agricultural Biodiversity Assessment",
@@ -2736,7 +3024,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/NDALXF"
+                        "path": "\/10.7910\/DVN\/NDALXF",
+                        "doi": "10.7910\/DVN\/NDALXF",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/NDALXF",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Malawi Household Surveys for Agricultural Biodiversity Assessment",
@@ -2754,7 +3045,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/NEF7ZD"
+                        "path": "\/10.7910\/DVN\/NEF7ZD",
+                        "doi": "10.7910\/DVN\/NEF7ZD",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/NEF7ZD",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Mali Household Surveys for Agricultural Biodiversity Assessment",
@@ -2772,7 +3066,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2790,7 +3087,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/MEAPCE"
+                        "path": "\/10.7910\/DVN\/MEAPCE",
+                        "doi": "10.7910\/DVN\/MEAPCE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/MEAPCE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "LACOSREP Upper-East Ghana Reservoir Inventory",
@@ -2808,7 +3108,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/2YAJPQ"
+                        "path": "\/10.7910\/DVN\/2YAJPQ",
+                        "doi": "10.7910\/DVN\/2YAJPQ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/2YAJPQ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "SNP dataset in musa acuminata (banana) panel",
@@ -2826,7 +3129,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/25450"
+                        "path": "\/10.7910\/DVN\/25450",
+                        "doi": "10.7910\/DVN\/25450",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/25450",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Fingerprinting data musa accessions with SSR",
@@ -2844,7 +3150,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "hdl.handle.net",
-                        "path": "\/1902.1\/21250"
+                        "path": "\/1902.1\/21250",
+                        "doi": "1902.1\/21250",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:1902.1\/21250",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Bioversity Collecting Mission Database",
@@ -2862,7 +3171,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/XGR0GJ"
+                        "path": "\/10.7910\/DVN\/XGR0GJ",
+                        "doi": "10.7910\/DVN\/XGR0GJ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/XGR0GJ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Phantom III drone imagery",
@@ -2880,7 +3192,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/MEAPCE"
+                        "path": "\/10.7910\/DVN\/MEAPCE",
+                        "doi": "10.7910\/DVN\/MEAPCE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/MEAPCE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "LACOSREP Upper-East Ghana Reservoir Inventory",
@@ -2898,7 +3213,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/HSXUVE"
+                        "path": "\/10.7910\/DVN\/HSXUVE",
+                        "doi": "10.7910\/DVN\/HSXUVE",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/HSXUVE",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Priority CWR species of the SADC region",
@@ -2916,7 +3234,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/AI4CRZ"
+                        "path": "\/10.7910\/DVN\/AI4CRZ",
+                        "doi": "10.7910\/DVN\/AI4CRZ",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/AI4CRZ",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Maps of Volta basin hydrometeorogical baselines",
@@ -2934,7 +3255,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/BV1TQ2"
+                        "path": "\/10.7910\/DVN\/BV1TQ2",
+                        "doi": "10.7910\/DVN\/BV1TQ2",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/BV1TQ2",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Baseline ecosystem service maps",
@@ -2952,7 +3276,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/8YXCFR"
+                        "path": "\/10.7910\/DVN\/8YXCFR",
+                        "doi": "10.7910\/DVN\/8YXCFR",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/8YXCFR",
+                        "data": null
                     },
                     "visible": true,
                     "name": "CWR checklist and priority CWR of Zambia",
@@ -2970,7 +3297,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/27236"
+                        "path": "\/10.7910\/DVN\/27236",
+                        "doi": "10.7910\/DVN\/27236",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/27236",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Geographic coordinates, environmental and genetic data for 256 wild barley accessions.",
@@ -2988,7 +3318,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/FCENUH"
+                        "path": "\/10.7910\/DVN\/FCENUH",
+                        "doi": "10.7910\/DVN\/FCENUH",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/FCENUH",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Banana (Musa spp.) genetic resources information and high-throughput genotyping data",
@@ -3006,7 +3339,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/LZWPJP"
+                        "path": "\/10.7910\/DVN\/LZWPJP",
+                        "doi": "10.7910\/DVN\/LZWPJP",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/LZWPJP",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Multi-fasta file of GRAS Transcription Factors in Angiosperms",
@@ -3024,7 +3360,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/Q0ESWS"
+                        "path": "\/10.7910\/DVN\/Q0ESWS",
+                        "doi": "10.7910\/DVN\/Q0ESWS",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/Q0ESWS",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Banana triploid cultivars under osmotic stress conditions",
@@ -3042,7 +3381,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/QBRNED"
+                        "path": "\/10.7910\/DVN\/QBRNED",
+                        "doi": "10.7910\/DVN\/QBRNED",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/QBRNED",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Gene ontology mapping to DH pahang reference genome v2",
@@ -3060,7 +3402,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/D6S9LI"
+                        "path": "\/10.7910\/DVN\/D6S9LI",
+                        "doi": "10.7910\/DVN\/D6S9LI",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/D6S9LI",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Surveys of farmer households and seed suppliers in the context of a seed value chain analysis for common bean and banana in Uganda",
@@ -3078,7 +3423,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/4ICF6W"
+                        "path": "\/10.7910\/DVN\/4ICF6W",
+                        "doi": "10.7910\/DVN\/4ICF6W",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/4ICF6W",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Replication data for: \"Crop variety management for climate adaptation supported by citizen science\"",
@@ -3096,7 +3444,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/IFI1QU"
+                        "path": "\/10.7910\/DVN\/IFI1QU",
+                        "doi": "10.7910\/DVN\/IFI1QU",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/IFI1QU",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Gene annotation, orthogroups and gene trees in Musa acuminata subspecies",
@@ -3114,7 +3465,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/0O1GW1"
+                        "path": "\/10.7910\/DVN\/0O1GW1",
+                        "doi": "10.7910\/DVN\/0O1GW1",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/0O1GW1",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Replication data for: \"The future of coffee and cocoa agroforestry in a warmer Mesoamerica\"",
@@ -3132,7 +3486,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/KSOSDU"
+                        "path": "\/10.7910\/DVN\/KSOSDU",
+                        "doi": "10.7910\/DVN\/KSOSDU",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/KSOSDU",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Glycosyltransferase family 61 (GT61) protein sequences",
@@ -3150,7 +3507,10 @@
                     "dataset": {
                         "scheme": "http",
                         "host": "dx.doi.org",
-                        "path": "\/10.7910\/DVN\/MHG945"
+                        "path": "\/10.7910\/DVN\/MHG945",
+                        "doi": "10.7910\/DVN\/MHG945",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/MHG945",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Mali- Protocole Rappel Alimentaire de 24 heures ouvert",
@@ -3168,7 +3528,10 @@
                     "dataset": {
                         "scheme": "https",
                         "host": "doi.org",
-                        "path": "\/10.7910\/DVN\/UHULV3"
+                        "path": "\/10.7910\/DVN\/UHULV3",
+                        "doi": "10.7910\/DVN\/UHULV3",
+                        "dataset_api_url": "https:\/\/dataverse.harvard.edu\/api\/datasets\/:persistentId?persistentId=doi:10.7910\/DVN\/UHULV3",
+                        "data": null
                     },
                     "visible": true,
                     "name": "Genome wide association study to identify the genetic base of smallholder farmer preferences of durum wheat traits",
