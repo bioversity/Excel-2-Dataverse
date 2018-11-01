@@ -1,0 +1,14 @@
+{
+    "name": "bioversity/dataverse-agrovoc_indexing",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alessandro Gubitosi",
+            "email": "a.gubitosi@cgiar.org"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.5",
+        "monolog/monolog": "^1.23"
+    }
+}
