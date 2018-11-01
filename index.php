@@ -41,7 +41,6 @@ function url_open($url) {
 
 function parse_xml($json, $row, $worksheet, $visible) {
     $visible_label = ($visible) ? "visible" : "not visible";
-    $rownr = 1;
     $highestRow = $worksheet->getHighestRow(); // e.g. 10
     $highestColumn = $worksheet->getHighestColumn(); // e.g 'F'
     $highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
@@ -76,7 +75,8 @@ function parse_xml($json, $row, $worksheet, $visible) {
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"] = parse_url($value);
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["visible"] = $visible;
                 if($visible) {
-                    // if($row->getRowIndex() == "24") {
+                    // Extract datasets only for row 24
+                    if($row->getRowIndex() == 24 || $row->getRowIndex() == 57 || $row->getRowIndex() == 58) {
                         $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["doi"] = $doi;
                         $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["dataset_api_url"] = $dataset_api_url;
                         // $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = json_decode(url_open($dataset_api_url), 1)["data"];
@@ -85,12 +85,11 @@ function parse_xml($json, $row, $worksheet, $visible) {
                         // $logger->warning(escapeshellcmd(url_open($dataset_api_url)));
                         // print $dataset_api_url ."\n";
                         $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = url_open($dataset_api_url);
-                    // }
+                    }
                 }
             }
         }
     }
-    $rownr++;
 
     // print_r($json);
     return $json;
@@ -108,7 +107,7 @@ foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
 }
 print_r($json);
 file_put_contents(getcwd() . "/output.txt", print_r($json, true));
-file_put_contents(getcwd() . "/output.json", json_encode($json));
+file_put_contents(getcwd() . "/output.json", json_encode($json, JSON_PRETTY_PRINT));
 // header("Content-type: application/json");
 // print_r(json_encode($json));
 ?>
