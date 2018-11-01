@@ -104,7 +104,7 @@ foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
     }
 }
 print_r($json);
-file_put_contents(getcwd() . "/output.txt", $json);
+file_put_contents(getcwd() . "/output.txt", print_r($json, true));
 file_put_contents(getcwd() . "/output.json", json_encode($json));
 // header("Content-type: application/json");
 // print_r(json_encode($json));
