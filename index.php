@@ -18,6 +18,11 @@ $worksheet = $spreadsheet->getActiveSheet();
 $json = [];
 $json[FILENAME] = [];
 
+/**
+ * Open an URL using cURL
+ * @param  string                           $url                                The given URL
+ * @return object                                                               A JSON decoded output
+ */
 function url_open($url) {
     $logger = new Logger("agrovoc-indexing");
 
@@ -32,13 +37,19 @@ function url_open($url) {
 
         return json_decode($output);
     }
-    // $logger->pushHandler(new StreamHandler(getcwd() . "/curl.log", Logger::INFO));
-    // $logger->info($output->data);
     return json_decode($output)->data;
 
     curl_close($ch);
 }
 
+/**
+ * Parse the opened xml file by PHP Spreadsheet and do the job
+ * @param  array                            $json                               The array to manipulate
+ * @param  object                           $row                                The PHP Spreadsheet row object
+ * @param  object                           $worksheet                          The PHP Spreadsheet worksheet object
+ * @param  bool                             $visible                            This row is visible?
+ * @return object                                                               The result object
+ */
 function parse_xml($json, $row, $worksheet, $visible) {
     $visible_label = ($visible) ? "visible" : "not visible";
     $highestRow = $worksheet->getHighestRow(); // e.g. 10
@@ -46,7 +57,6 @@ function parse_xml($json, $row, $worksheet, $visible) {
     $highestColumnIndex = \PhpOffice\PhpSpreadsheet\Cell\Coordinate::columnIndexFromString($highestColumn); // e.g. 5
 
     for($col = 1; $col <= $highestColumnIndex; $col++) {
-        // $lastCellAddress = $worksheet->getCellByColumnAndRow($$col, 1)->getCoordinate();
         // The first row is used for labels
         $title = $worksheet->getCellByColumnAndRow($col, 1)->getValue();
         $value = $worksheet->getCellByColumnAndRow($col, $row->getRowIndex())->getValue();
@@ -61,7 +71,6 @@ function parse_xml($json, $row, $worksheet, $visible) {
                 $json[$visible_label]["_labels"]["row " . $row->getRowIndex()][$column_name] = $value;
             }
         } elseif($row->getRowIndex() > 1) { // ----------------------------> "contents" section
-            // $visible_rows = [];
             // Split keywords in sub-labels
             if(strpos($title, "__") !== false) {
                 $keywords = explode("__", $title);
@@ -69,21 +78,18 @@ function parse_xml($json, $row, $worksheet, $visible) {
             } else {
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()][$title] = $value;
             }
+
             if($title == "id") {
                 $doi = substr(parse_url($value)["path"], 1);
                 $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=doi:" . $doi;
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"] = parse_url($value);
                 $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["visible"] = $visible;
                 if($visible) {
-                    // Extract datasets only for row 24
                     $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["doi"] = $doi;
                     $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["dataset_api_url"] = $dataset_api_url;
-                    if($row->getRowIndex() == 24 || $row->getRowIndex() == 57 || $row->getRowIndex() == 58) {
-                        // $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = json_decode(url_open($dataset_api_url), 1)["data"];
 
-                        // LOG
-                        // $logger->warning(escapeshellcmd(url_open($dataset_api_url)));
-                        // print $dataset_api_url ."\n";
+                    // Download datasets only for row 24, 57 and 58
+                    if($row->getRowIndex() == 24 || $row->getRowIndex() == 57 || $row->getRowIndex() == 58) {
                         $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = url_open($dataset_api_url);
                     } else {
                         $json[$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["data"] = null;
@@ -93,23 +99,30 @@ function parse_xml($json, $row, $worksheet, $visible) {
         }
     }
 
-    // print_r($json);
     return $json;
 }
 
+/**
+ * Iterate rows
+ */
 foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
-    // print $spreadsheet->getActiveSheet()->getRowDimension($row->getRowIndex())->getVisible();
+    // Separe visible/not visible rows
     if($spreadsheet->getActiveSheet()->getRowDimension($row->getRowIndex())->getVisible()) {
-        // print $row->getRowIndex() . "\n";
-        // exit();
         $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, true);
     } else {
         $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, false);
     }
 }
+
+// Display the output as plain text
 // print_r($json);
+
+// Save the output as plain text object
 file_put_contents(getcwd() . "/output.txt", print_r($json, true));
+
 header("Content-type: application/json");
-file_put_contents(getcwd() . "/output.json", json_encode($json, JSON_PRETTY_PRINT));
+// Display the output as json
 print_r(json_encode($json, JSON_PRETTY_PRINT));
+// Save the output as json
+file_put_contents(getcwd() . "/output.json", json_encode($json, JSON_PRETTY_PRINT));
 ?>
