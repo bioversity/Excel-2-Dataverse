@@ -105,9 +105,9 @@ foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
         $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, false);
     }
 }
-print_r($json);
+// print_r($json);
 file_put_contents(getcwd() . "/output.txt", print_r($json, true));
+header("Content-type: application/json");
 file_put_contents(getcwd() . "/output.json", json_encode($json, JSON_PRETTY_PRINT));
-// header("Content-type: application/json");
-// print_r(json_encode($json));
+print_r(json_encode($json));
 ?>
