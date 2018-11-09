@@ -10,7 +10,7 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 
-define("FILENAME", "resultAgrovoc_filled_20181102.xlsx");
+define("FILENAME", "resultAgrovoc_filled_20181108.xlsx");
 
 $spreadsheet = new Spreadsheet();
 $reader = new \PhpOffice\PhpSpreadsheet\Reader\Xlsx();
@@ -95,6 +95,48 @@ function recognise_keywords(&$arr, $index, $title, $value, $section, $column_nam
     }
 }
 
+function create_values($field, $type, $value) {
+    $old_values = [];
+    // $field_data = [];
+    foreach($field as $k => $field_data) {
+        $old_values[] = trim($field_data->{$type}->value);
+
+        if(isset($field_data->{$type})) {
+            $field_data->{$type}->old_values = $old_values;
+            $field_data->{$type}->value = trim($value);
+        } else {
+            $field_data->{$type} = new stdClass();
+            $field_data->{$type}->typeName = $type;
+            $field_data->{$type}->multiple = false;
+            $field_data->{$type}->typeClass = "primitive";
+            $field_data->{$type}->old_values = null;
+            $field_data->{$type}->value = trim($value);
+        }
+    }
+    // $field_data->{$type} = "ok";
+    // print_r($field_data);
+    return $field_data;
+}
+
+function save($data, $name = "output", $force = false) {
+    if($force) {
+        // Save the output as plain text object
+        file_put_contents(getcwd() . "/" . $name . ".txt", print_r($data, true));
+        // Save the output as json
+        file_put_contents(getcwd() . "/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+    } else {
+        // Text file does not exists
+        if(!file_exists(getcwd() . "/" . $name . ".txt")) {
+            // Save the output as plain text object
+            file_put_contents(getcwd() . "/" . $name . ".txt", print_r($data, true));
+        }
+        // JSON file does not exists
+        if(!file_exists(getcwd() . "/" . $name . ".json")) {
+            // Save the output as json
+            file_put_contents(getcwd() . "/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+        }
+    }
+}
 /**
  * Parse the opened xml file by PHP Spreadsheet and do the job
  * @param  array                            $json                               The array to manipulate
@@ -133,18 +175,21 @@ function parse_xml($json, $row, $worksheet, $visible) {
             if($title == "id") {
                 // $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["visible"] = $visible;
 
-                $doi = substr(parse_url($value)["path"], 1);
-                $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=doi:" . $doi;
+                // Match the schema (HDL or DOI)
+                $schema = (explode(".", parse_url($value)["host"])[0] == "hdl") ? "hdl" : "doi";
+                $id = substr(parse_url($value)["path"], 1);
+                $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=" . (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
 
                 $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["source"]["doi"]["uri"] = parse_url($value);
                 $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["source"]["doi"]["uri"]["value"] = $value;
-                $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["source"]["doi"]["value"] = $doi;
+                $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["source"]["doi"]["value"] = $id;
                 $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["target"]["dataset_api_url"] = $dataset_api_url;
 
                 if($visible) {
                     // Download datasets only for first 3 rows
                     // if(($row->getRowIndex() - 1) <= 3) {
-                        $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["results"] = url_open($dataset_api_url);
+                        $dataset = url_open($dataset_api_url);
+                        $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["results"] = $dataset;
                     // } else {
                     //     $json["rows"][$visible_label]["contents"]["row " . $row->getRowIndex()]["dataset"]["results"] = null;
                     // }
@@ -157,28 +202,68 @@ function parse_xml($json, $row, $worksheet, $visible) {
 
     return $json;
 }
+// exit();
 
-/**
- * Iterate rows
- */
-foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
-    // Separe visible/not visible rows
-    if($spreadsheet->getActiveSheet()->getRowDimension($row->getRowIndex())->getVisible()) {
-        $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, true);
-    } else {
-        $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, false);
+// Check whether the output file exists (speed up and separate jobs)
+if(!file_exists(getcwd() . "/output.json")) {
+    /**
+    * Iterate rows
+    */
+    foreach($spreadsheet->getActiveSheet()->getRowIterator() as $row) {
+        // Separe visible/not visible rows
+        if($spreadsheet->getActiveSheet()->getRowDimension($row->getRowIndex())->getVisible()) {
+            $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, true);
+        } else {
+            $json[FILENAME] = parse_xml($json[FILENAME], $row, $worksheet, false);
+        }
+    }
+    save($json);
+} else {
+    // $changes = [];
+    $json = json_decode(file_get_contents(getcwd() . "/output.json"));
+    foreach($json->{FILENAME}->rows->visible->contents as $row_name => $row_data) {
+        if(!isset($row_data->dataset->results->data)) {
+            print $row_name . " with new keyword \"" . $row_data->_keywords->value . "\" does not exists in Dataverse\n";
+            print "Check the dataset url schema!";
+            exit();
+        } else {
+            // Empty keywords in the excel file
+            if(!isset($row_data->_keywords) || !isset($row_data->_keywords->value)) {
+                foreach($row_data->dataset->results->data->latestVersion->metadataBlocks->citation->fields as $k => $v) {
+                    if($v->typeName == "keyword") {
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordValue", $row_data->_keywords->value);
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordVocabulary", isset($row_data->Vocabulary) ? $row_data->Vocabulary : null);
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordVocabularyURI", isset($row_data->_keywords->uri) ? $row_data->_keywords->uri : null);
+
+                        $changes[$row_name] = $v->value[count($v->value)-1];
+                        $row_data->dataset->results->data->latestVersion->metadataBlocks->citation->fields[$k]->value = $v->value[count($v->value)-1];
+                    }
+                }
+            } else {
+                foreach($row_data->dataset->results->data->latestVersion->metadataBlocks->citation->fields as $k => $v) {
+                    if($v->typeName == "keyword") {
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordValue", $row_data->_keywords->value);
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordVocabulary", isset($row_data->Vocabulary) ? $row_data->Vocabulary : null);
+                        $v->value[count($v->value)-1] = create_values($v->value, "keywordVocabularyURI", isset($row_data->_keywords->uri) ? $row_data->_keywords->uri : null);
+
+                        $changes[$row_name] = $v->value[count($v->value)-1];
+                        $row_data->dataset->results->data->latestVersion->metadataBlocks->citation->fields[$k]->value = $v->value[count($v->value)-1];
+                    }
+                }
+            }
+        }
     }
 }
 
 // Display the output as plain text
+// print_r($changes);
 // print_r($json);
 
-// Save the output as plain text object
-file_put_contents(getcwd() . "/output.txt", print_r($json, true));
-
-header("Content-type: application/json");
 // Display the output as json
-// print_r(json_encode($json, JSON_PRETTY_PRINT));
-// Save the output as json
-file_put_contents(getcwd() . "/output.json", json_encode($json, JSON_PRETTY_PRINT));
+header("Content-type: application/json");
+// print_r(json_encode($changes, JSON_PRETTY_PRINT));
+print_r(json_encode($json, JSON_PRETTY_PRINT));
+
+save($changes, "changes");
+save($json, "output");
 ?>
