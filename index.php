@@ -3,7 +3,8 @@
  *
  *
  * Available parameters:
- * @var debug           Set debug mode. NOTE: debug mode does not save local files
+ * @var row             Filter one or more rows (separate with "," or with "-" to select a range)
+ * @var debug           Set debug mode. NOTE: debug mode does not save local files and append "old_values" into the output tree
  * @var only_fields     Display only fields in `dataset > results > data > latestVersion > metadataBlocks > citation > fields`
  * @var
  */
@@ -33,11 +34,12 @@ use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
 
 
-define("FILENAME", "resultAgrovoc_filled_20181108.xlsx");
+define("SOURCE", "resultAgrovoc_filled_20181108.xlsx");
 
 
 $parse_row = (isset($_GET["row"])) ? $_GET["row"] : null;
-$check_file = (!is_null($parse_row)) ? "row_" . $parse_row : "output";
+$check_file = ((!is_null($parse_row)) ? "row_" . $parse_row : "output") . ((isset($_GET["only_fields"])) ? "__only_fields" : "");
+define("FILENAME", $check_file);
 
 // Check whether the output file exists (speed up and separate jobs)
 if(file_exists(getcwd() . "/export/{$check_file}.json")) {
@@ -47,16 +49,16 @@ if(file_exists(getcwd() . "/export/{$check_file}.json")) {
     $json = json_decode(file_get_contents(getcwd() . "/export/{$check_file}.json"));
     output($json, true);
 
-    foreach($json->{FILENAME}->rows->visible->contents as $row_name => $row_data) {
+    foreach($json->{SOURCE}->rows->visible->contents as $row_name => $row_data) {
         if(!isset($row_data->dataset->results->data)) {
             save($row_name . " with new keyword \"" . $row_data->_keywords->value . "\" does not exists in Dataverse\nCheck the dataset url schema!\n\n", "report");
         }
     }
 } else {
+    trigger_error("[INFO] Starting...", E_USER_NOTICE);
     /**
     * Parse the excel file
     */
-    $data = Agrovoc::parse_xml(FILENAME, $parse_row);
-    output($data, true);
+    Agrovoc::parse_xml(SOURCE, $parse_row);
 }
 ?>

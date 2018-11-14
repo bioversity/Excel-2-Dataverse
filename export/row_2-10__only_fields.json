@@ -1,0 +1,1887 @@
+{
+    "row 2": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Phantom III drone imagery"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Jones, Sarah"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International, King's College London"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "DeClerck, Fabrice"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Fremier, Alex"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Washington State University"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Ouedraogo, Idrissa"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Universit\u00e9 d'Ouaga I"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Jones, Sarah"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International, King's College London"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "s.jones@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "This dataset contains imagery collected with a Phantom III drone at ~300m elevation over 8 small reservoirs in April 2016.  Two sets of imagery were acquired corresponding to a DJI FC300S (Sony EXMOR 1\/2.3) visible light camera and a Senterra 1.2MP GS-0002 6.05mm near-infrared camera mounted on the drone. We provide the image log which shows geographic coordinates of collection sites. Raw images are available on request (too large to upload)."
+                    },
+                    "dsDescriptionDate": {
+                        "typeName": "dsDescriptionDate",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2016-04-23"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Earth and Environmental Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "drone imagery"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_156"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Jones, Sarah"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2018-03-22"
+        }
+    ],
+    "row 3": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Protocol for the Agricultural Biodiversity (ABD) Assessment in Mali \/ Protocole pour l\u2019\u00e9valuation de la Biodiversit\u00e9 Agricole (ABD) \u00e1 Mali"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "N'Danikou, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Vodouhe, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Sidibe, A"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Institut d\u2019Economie Rural, Mali"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "mrbellon@yahoo.com"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "The biodiversity of plant and animal species both domesticated and wild used for food by humans (referred to here as agricultural biodiversity\u2014ABD) is one of the most important assets for rural households, particularly for the poor in marginal areas such as the drylands of the developing world. A contribution of Bioversity International to the Dryland Systems CGIAR Research Programme (CRP) [http:\/\/drylandsystems.cgiar.org\/] has been to examine systematically the diversity of these species in CRP target sites in Mali, Ghana, Malawi and India. Bioversity and partners have carried out a set of Agricultural Biodiversity Assessments in these countries. In the case of Mali, the selected sites include two villages in the Sikasso region: Kani and Farakoro. These villages have been already part of an ICRISAT baseline survey. An additional village, N\u2019Goutjina, was selected by Bioversity to complement the work. Here we present the protocols used for collecting the data from Mali.\r\nThe objective of the ABD Assessment is to identify and quantify all the useful plant, animal, and aquatic species utilized by rural households and communities in the Dryland Systems CRP sites, as well as information on markets attended and general socioeconomic household characteristics. This information will be used to characterize three dimensions of ABD: (1) diversity in the production system, including on farm and common lands; (2) dietary diversity; and (3) market diversity; in terms of the elements and relationships involved and the exogenous factors that influence their status and dynamics. These data will be the basis for analyzing the roles of ABD in the lives and livelihoods of these rural populations in order to identify entry points for designing and implementing interventions that contribute to improve their well-being."
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "International, Bioversity"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-12-19"
+        }
+    ],
+    "row 4": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Agricultural Biodiversity Assessments in dryland systems of Ghana, India, Malawi, Mali and Niger: an overview of the framework, methods and datasets"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "mrbellon@yahoo.com"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "The Agricultural Biodiversity Assessment is a methodology that combines qualitative and quantitative approaches to assess the biodiversity of plant and animal species both domesticated and wild used for food by human populations in specific locations. In the context of the CGIAR Research Program on Dryland Production Systems and with its support, Bioversity International and partners carried out a series of Assessments in selected sites of Ghana, India, Malawi, Mali and Niger. As a result several datasets have been produced. This document provides a background and an overview of the data that have been collected. It offers the conceptual framework that guided its design, the context in which the Assessment was carried out, and a short description of the protocols and methods used, as well as a link to the documents and datasets."
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2017-02-01"
+        }
+    ],
+    "row 5": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Mali Focus Group Discussions Data"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "N'Danikou, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Vodouhe, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Ntandou-Bouzitou, N.D."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Sidibe, A."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Institut d'Economie Rural, Mali"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "mrbellon@yahoo.com"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Raymond Vodouhe"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "r.vodouhe@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "A series of focus group discussions (FGDs) to elicit the local knowledge about the agricultural and wild biodiversity present in the study areas in order to generate: (a) an inventory (list) of all useful plant, and animal species used by local communities for human food, animal feed, medicine, fuel, housing, farming tools, etc. and their local names; (b) an inventory of all foods consumed; (c) an inventory of species and products bought and sold in markets that people in the village attend. Two FGDs per village in three villages. FGDs were held separately for men and women in order to collect gender disaggregated data\r\nIn each of the three villages, two focus group discussions were held separately. One with men and the other with women. Each group will deal with the three aspects for discussion:\r\nUseful biological diversity in the production system; Market diversity; and Dietary diversity.  There were between 10-16 participants in each group. Each group tried to include a cross-section of individuals involved in agricultural production or at least collecting useful plants from common lands and the wild, representing different levels of access to land (land owners, local land renters and migrant land renters), different ethnic groups present in the village and different age groups (special emphasis should be placed to include younger farmers). For each group there were two facilitators, one to guide the exercise and the other to document the process (take notes, photographs, etc.). The  data were elicited using the four-square methodology explained in the Protocol document.\r\nThe three villages survey were in the Sikasso District of Mali: Fakoro (Lat 12\u00b013074, Lon 005\u00b020156); Kani (Lat 12\u00b015011, Lon 005\u00b010827); N'goutjina (Lat 12\u00b017961, Lon 005\u00b028372)"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-12-02"
+        },
+        {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "timePeriodCoveredStart": {
+                        "typeName": "timePeriodCoveredStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2012"
+                    },
+                    "timePeriodCoveredEnd": {
+                        "typeName": "timePeriodCoveredEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2013"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dateOfCollection",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dateOfCollectionStart": {
+                        "typeName": "dateOfCollectionStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2013-12-11"
+                    },
+                    "dateOfCollectionEnd": {
+                        "typeName": "dateOfCollectionEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014-01-04"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Survey data"
+            ]
+        },
+        {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "CRP 1.1: CGIAR Research Program on Dryland Agricultural Production Systems"
+            ]
+        }
+    ],
+    "row 6": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Ghana Focus Group Discussions Data"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "N'Danikou, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Vodouhe, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Ntandou-Bouzitou, N.D."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "m.bellon@cgiar.org"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Raymond Vodouhe"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "r.vodouhe@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "A series of focus group discussions (FGDs) to elicit the local knowledge about the agricultural and wild biodiversity present in the study areas in order to generate: (a) an inventory (list) of all useful plant, and animal species used by local communities for human food, animal feed, medicine, fuel, housing, farming tools, etc. and their local names; (b) an inventory of all foods consumed; (c) an inventory of species and products bought and sold in markets that people in the village attend. Two FGDs per village in three villages. FGDs were held separately for men and women in order to collect gender disaggregated data.\r\nGeographic area includes: Three villages in the  Lawra District of Ghana: Bonpari (Lat 10.67, Lon W002.81); Gbelinkaa (Lat N10.58, Lon W002.83); Yagtuur (Lat N10.55, Lon W 002.86)\r\nIn each of the three villages, two focus group discussions were held separately. One with men and the other with women. Each group will deal with the three aspects for discussion:\r\nUseful biological diversity in the production system; Market diversity; and Dietary diversity.  There were between 10-16 participants in each group. Each group tried to include a cross-section of individuals involved in agricultural production or at least collecting useful plants from common lands and the wild, representing different levels of access to land (land owners, local land renters and migrant land renters), different ethnic groups present in the village and different age groups (special emphasis should be placed to include younger farmers). For each group there were two facilitators, one to guide the exercise and the other to document the process (take notes, photographs, etc.). The  data were elicited using the four-square methodology explained in the Protocol document.\r\n\r\n"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "notesText",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Three villages in the  Lawra District of Ghana: Bonpari (Lat 10.67, Lon W002.81); Gbelinkaa (Lat N10.58, Lon W002.83); Yagtuur (Lat N10.55, Lon W 002.86)"
+        },
+        {
+            "typeName": "language",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "English"
+            ]
+        },
+        {
+            "typeName": "contributor",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "contributorType": {
+                        "typeName": "contributorType",
+                        "multiple": false,
+                        "typeClass": "controlledVocabulary",
+                        "value": "Hosting Institution"
+                    },
+                    "contributorName": {
+                        "typeName": "contributorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-11-17"
+        },
+        {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "timePeriodCoveredStart": {
+                        "typeName": "timePeriodCoveredStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2013"
+                    },
+                    "timePeriodCoveredEnd": {
+                        "typeName": "timePeriodCoveredEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Survey data"
+            ]
+        },
+        {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "CRP 1.1: CGIAR Research Program on Dryland Agricultural Production Systems "
+            ]
+        }
+    ],
+    "row 7": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Rajasthan Focus Group Discussions Data "
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mathur, P."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Kumar, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "GRAVIS"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "mrbellon@yahoo.com"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Shankar Dandin"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "s.dandin@cgiar.org"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Prem Mathur"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "p.mathur@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "A series of focus group discussions (FGDs) to elicit the local knowledge about the agricultural and wild biodiversity present in the study areas in order to generate: (a) an inventory (list) of all useful plant, and animal species used by local communities for human food and their local names; (b) an inventory of all foods consumed; (c) an inventory of markets that people in the village attend. \r\n\"In each of the eight villages, one focus group discussion was held, but including both men and women participants. Each group will deal with the three aspects for discussion:\r\nUseful biological diversity in the production system; Market diversity; and Dietary diversity.  There were between 10-16 participants in each group. Each group tried to include a cross-section of individuals involved in agricultural production or at least collecting useful plants from common lands and the wild, representing different levels of access to land (land owners, local land renters and migrant land renters), different ethnic groups present in the village and different age groups (special emphasis should be placed to include younger farmers). For each group there were two facilitators, one to guide the exercise and the other to document the process (take notes, photographs, etc.). The  data were elicited using the four-square methodology explained in the Protocol document.\"\r\nEight villages of three districts were surveyed:  (Balmer, Jaisalmer and Jodhpur) in the State of Rajasthan:  Damodara (26\u00b054',70\u00b043'); Deda (26\u00b094',70\u00b043'); Dedhu, (27\u00b020', 71\u00b045'); Dhirasar (25\u00b027', 71\u00b011'); Dhok (25\u00b029', 71\u00b001'); Govindupura (26\u00b049', 73\u00b005'); Mansagar (26\u00b045', 73\u00b008'); Meghwalo Ki Dhani (27.3711\u00b0 N, 72.2334\u00b0 E, this village was not part of the household survey). \r\n"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2017-01-12"
+        },
+        {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "timePeriodCoveredStart": {
+                        "typeName": "timePeriodCoveredStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2013"
+                    },
+                    "timePeriodCoveredEnd": {
+                        "typeName": "timePeriodCoveredEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Survey data"
+            ]
+        },
+        {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "CRP 1.1: CGIAR Research Program on Dryland Agricultural Production Systems"
+            ]
+        }
+    ],
+    "row 8": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": " Niger Focus Group Discussion Data"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Vodouhe, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "N'Danikou, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Raymond Vodouhe"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "r.vodouhe@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "A series of focus group discussions (FGDs) to elicit the local knowledge about the agricultural and wild biodiversity present in the study areas in order to generate: (a) an inventory (list) of all useful plant, and animal species used by local communities for human food, animal feed, medicine, fuel, housing, farming tools, etc. and their local names; (b) an inventory of all foods consumed; (c) an inventory of species and products bought and sold in markets that people in the village attend. Two FGDs per village in three villages. FGDs were held separately for men and women in order to collect gender disaggregated data.\r\nIn each of the three villages, two focus group discussions were held separately. One with men and the other with women. Each group will deal with the three aspects for discussion:\r\nUseful biological diversity in the production system; Market diversity; and Dietary diversity.  There were between 10-16 participants in each group. Each group tried to include a cross-section of individuals involved in agricultural production or at least collecting useful plants from common lands and the wild, representing different levels of access to land (land owners, local land renters and migrant land renters), different ethnic groups present in the village and different age groups (special emphasis should be placed to include younger farmers). For each group there were two facilitators, one to guide the exercise and the other to document the process (take notes, photographs, etc.). The  data were elicited using the four-cell analysis methodology explained in the Protocol document."
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-12-20"
+        },
+        {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "timePeriodCoveredStart": {
+                        "typeName": "timePeriodCoveredStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2015-08-01"
+                    },
+                    "timePeriodCoveredEnd": {
+                        "typeName": "timePeriodCoveredEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2015-09-30"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Survey data"
+            ]
+        },
+        {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "CRP 1.1: CGIAR Research Program on Dryland Agricultural Production Systems"
+            ]
+        }
+    ],
+    "row 9": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Ghana Household Surveys for Agricultural Biodiversity Assessment"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "N'Danikou, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Vodouhe, R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Ntandou-Bouzitou, N.D."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "m.bellon@cgiar.org"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Raymond Vodouhe"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "r.vodouhe@cgiar.org"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity-Dataverse"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "bioversity-dataverse@groups.cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "To identify and quantify the number of all plant and animal species (domesticated and wild) and within each species, the number of types\/varieties\/breeds at the household-level that are: (a) grown on farm and home garden, or collected from the wild; (b) consumed as part of the diet; and (c) purchased and sold in the study sites. Information was collected for  each species on its place of production or collection (farm, home garden, collected in the wild, etc.), the objective for its production or collection (Self-consumption, sale in the market, both), its different uses (food, medicine, animal feed, building material, processing, etc.), seasonality, the number of types, varieties and breeds recognized and used, key characteristics of its seed system (sources of seed, transactions and social relationships), and the water regime associated with its production (rainfed, irrigated, water harvest, etc.). Also data on assets and other socioeconomic indicators were collected.\r\nA household survey was carried out with a representative random sample of 60 households per village in three villages in the district of Lawra, (part of the Wa, Bobo and Sikasso transect where the CRP Dryland System is working in West Africa). Three villages were selected. The total sample size is 180 households. "
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "topicClassification",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "topicClassValue": {
+                        "typeName": "topicClassValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "FARM SURVEYS"
+                    },
+                    "topicClassVocab": {
+                        "typeName": "topicClassVocab",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "topicClassVocabURI": {
+                        "typeName": "topicClassVocabURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_28693"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "language",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "English"
+            ]
+        },
+        {
+            "typeName": "producer",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "producerName": {
+                        "typeName": "producerName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "producerURL": {
+                        "typeName": "producerURL",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/www.bioversityinternational.org\/"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-11-17"
+        },
+        {
+            "typeName": "timePeriodCovered",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "timePeriodCoveredStart": {
+                        "typeName": "timePeriodCoveredStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014-09"
+                    },
+                    "timePeriodCoveredEnd": {
+                        "typeName": "timePeriodCoveredEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014-09"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dateOfCollection",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dateOfCollectionStart": {
+                        "typeName": "dateOfCollectionStart",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014-09"
+                    },
+                    "dateOfCollectionEnd": {
+                        "typeName": "dateOfCollectionEnd",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "2014-09"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Farm survey"
+            ]
+        }
+    ],
+    "row 10": [
+        {
+            "typeName": "title",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": " Karnataka Focus Group Discussions Data"
+        },
+        {
+            "typeName": "author",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bellon, M.R."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mathur, P."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Dandin, S."
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    }
+                },
+                {
+                    "authorName": {
+                        "typeName": "authorName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Patil, H.B"
+                    },
+                    "authorAffiliation": {
+                        "typeName": "authorAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Horticulture Research Station, Vijayapura"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "datasetContact",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Mauricio Bellon"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "mrbellon@yahoo.com"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Shankar Dandin"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "s.dandin@cgiar.org"
+                    }
+                },
+                {
+                    "datasetContactName": {
+                        "typeName": "datasetContactName",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Prem Mathur"
+                    },
+                    "datasetContactAffiliation": {
+                        "typeName": "datasetContactAffiliation",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "Bioversity International"
+                    },
+                    "datasetContactEmail": {
+                        "typeName": "datasetContactEmail",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "p.mathur@cgiar.org"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "dsDescription",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "dsDescriptionValue": {
+                        "typeName": "dsDescriptionValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "A series of focus group discussions (FGDs) to elicit the local knowledge about the agricultural and wild biodiversity present in the study areas in order to generate: (a) an inventory (list) of all useful plant, and animal species used by local communities for human food, animal feed, medicine, fuel, housing, farming tools, etc. and their local names; (b) an inventory of all foods consumed; (c) an inventory of species and products bought and sold in markets that people in the village attend. Two FGDs per village in three villages. FGDs were held separately for men and women in order to collect gender disaggregated data.\r\nIn each of the three villages, two focus group discussions were held separately. One with men and the other with women. Each group will deal with the three aspects for discussion:\r\nUseful biological diversity in the production system; Market diversity; and Dietary diversity.  There were between 10-16 participants in each group. Each group tried to include a cross-section of individuals involved in agricultural production or at least collecting useful plants from common lands and the wild, representing different levels of access to land (land owners, local land renters and migrant land renters), different ethnic groups present in the village and different age groups (special emphasis should be placed to include younger farmers). For each group there were two facilitators, one to guide the exercise and the other to document the process (take notes, photographs, etc.). The  data were elicited using the four-square methodology explained in the Protocol document. Three villages in the Bijapur District: Mannur, Nandyal, Balaganur."
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "subject",
+            "multiple": true,
+            "typeClass": "controlledVocabulary",
+            "value": [
+                "Social Sciences",
+                "Agricultural Sciences"
+            ]
+        },
+        {
+            "typeName": "keyword",
+            "multiple": true,
+            "typeClass": "compound",
+            "value": [
+                {
+                    "keywordValue": {
+                        "typeName": "keywordValue",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "agriculture"
+                    },
+                    "keywordVocabulary": {
+                        "typeName": "keywordVocabulary",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "AGROVOC"
+                    },
+                    "keywordVocabularyURI": {
+                        "typeName": "keywordVocabularyURI",
+                        "multiple": false,
+                        "typeClass": "primitive",
+                        "value": "http:\/\/aims.fao.org\/aos\/agrovoc\/c_203"
+                    }
+                }
+            ]
+        },
+        {
+            "typeName": "depositor",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "Bioversity International"
+        },
+        {
+            "typeName": "dateOfDeposit",
+            "multiple": false,
+            "typeClass": "primitive",
+            "value": "2016-12-20"
+        },
+        {
+            "typeName": "kindOfData",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "Household\/Survey data"
+            ]
+        },
+        {
+            "typeName": "otherReferences",
+            "multiple": true,
+            "typeClass": "primitive",
+            "value": [
+                "CRP 1.1: CGIAR Research Program on Dryland Agricultural Production Systems"
+            ]
+        }
+    ]
+}

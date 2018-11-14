@@ -19,6 +19,14 @@
 */
 
 class Obj {
+    public static function list($array) {
+        if(is_array($array)) {
+            sort($array);
+        }
+        $res = preg_replace('/\,\s+(\w+)$/', " and $1", implode(", ", $array));
+        return (is_numeric($res)) ? (int)$res : $res;
+    }
+
     /**
      * Convert an array to an object
      *
@@ -52,7 +60,7 @@ class Obj {
 
     /**
      * Move an array item to the bottom of order
-     * 
+     *
      * @param  array                            $array                          The array to sort
      * @param  string                           $key                            The item to move to the bottom
      * @return array                                                            The sorted array

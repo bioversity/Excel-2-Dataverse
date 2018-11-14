@@ -37,7 +37,7 @@ class XML {
     }
 
     /**
-     * Get the excel column name
+     * Get the Excel column name
      * @example "A1"
      *
      * @param  integer                          $col                            The target column
@@ -48,7 +48,7 @@ class XML {
     }
 
     /**
-     * Get the excel column title
+     * Get the Excel column title
      *
      * @param  integer                          $col                            The target column
      * @return string                                                           The column name

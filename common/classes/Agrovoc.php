@@ -33,6 +33,14 @@ class Agrovoc {
     public static $highestRow;
     public static $highestColumn;
     public static $highestColumnIndex;
+    /**
+     * Filtering status
+     * Can be "single" (default), "multiple" or "range"
+     * @var string
+     */
+    public static $filter = "single";
+    public static $available_rows;
+    public static $unavailable_rows;
 
     /**
      * Open an URL using cURL
@@ -41,6 +49,7 @@ class Agrovoc {
      * @return object                                                           A JSON decoded output
     */
     private static function url_open($url) {
+        trigger_error("[INFO] Getting data from {$url}", E_USER_NOTICE);
         $logger = new Logger("agrovoc-indexing");
 
         $ch = curl_init();
@@ -63,6 +72,19 @@ class Agrovoc {
         return json_decode(json_encode($output));
 
         curl_close($ch);
+    }
+
+    /**
+     * Set a selected row filter
+     * @param string                            $filter                         The filter to select. Can be "single" (default), "multiple" or "range"
+     */
+    private function set_filter($filter) {
+        self::$filter = $filter;
+    }
+
+    private function set_row_availability($available, $unavailable) {
+        self::$available_rows = $available;
+        self::$unavailable_rows = $unavailable;
     }
 
     /**
@@ -145,8 +167,6 @@ class Agrovoc {
                 $field_data->{$type}->value = trim($value);
             }
         }
-        // $field_data->{$type} = "ok";
-        // print_r($field_data);
         return $field_data;
     }
 
@@ -183,7 +203,7 @@ class Agrovoc {
      * @param  string                           $name                           The file name. Default is "output"
      * @param  boolean                          $force                          Force overwriting? Default false
     */
-    public static function save($data, $name = "output", $force = false) {
+    public static function save($data, $name = FILENAME, $force = false) {
         if($force) {
             // Save the output as plain text object
             file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
@@ -206,10 +226,94 @@ class Agrovoc {
 
     /* ---------------------------------------------------------------------- */
 
+    private static function analyse_row_request() {
+        $filter = [];
+        switch(self::$filter) {
+            case "single":
+                $rows = [(int)$_GET["row"]];
+                break;
+            case "multiple":
+                $rows = explode(",", $_GET["row"]);
+                break;
+            case "range":
+                $rows = explode("-", $_GET["row"]);
+                break;
+        }
+        if(is_array($rows)) {
+            foreach($rows as $kr => $row) {
+                if((int)$row == 1 || (int)$row > self::$highestRow) {
+                    if(is_array($row)) {
+                        $key = array_search($row, $rows);
+                        if(false !== $key) {
+                            unset($rows[$key]);
+                        }
+                        if((int)$row <= 1 && (int)$row <= self::$highestRow) {
+                            $filter["available"] = $rows;
+                        }
+
+                        if((int)$row == $rows[$kr+1]) {
+                            $rows[$kr] = 2;
+                            unset($rows[$kr]);
+                        }
+                        sort($row);
+                        $filter["unavailable"][] = $row;
+
+                        self::set_row_availability($filter["available"], $filter["unavailable"]);
+                    } else {
+                        if((int)$row <= 1) {
+                            unset($rows[$kr]);
+                            $filter["unavailable"][] = (int)$row;
+                            $filter["available"][] = $row+1;
+                            self::set_row_availability($filter["available"], $filter["unavailable"]);
+                        }
+
+                        if((int)$row > self::$highestRow) {
+                            if((int)$row <= 1 && (int)$row <= self::$highestRow) {
+                                unset($rows[$kr]);
+                            }
+                            $rows[$kr] = self::$highestRow;
+                            $filter["unavailable"][] = (int)$row;
+                            $filter["available"] = $rows;
+                            self::set_row_availability($filter["available"], $filter["unavailable"]);
+                        }
+                    }
+                } else {
+                    if(!isset($filter["available"])) {
+                        if((int)$row > 1 && (int)$row <= self::$highestRow) {
+                            $filter["available"] = $rows;
+                        }
+                        self::set_row_availability($filter["available"], $filter["unavailable"]);
+                    }
+                }
+            }
+            sort($rows);
+        }
+        if(isset($filter["available"]) && count($filter["available"]) < 2) {
+            self::set_filter("single");
+        }
+
+        return $filter;
+    }
+
     /**
      * Create the stats section
      */
     private static function build_stats() {
+        if(isset($_GET["row"])) {
+            /**
+             * Check for multiple filtering
+             */
+            if(strpos($_GET["row"], ",") !== false) {
+                self::set_filter("multiple");
+            }
+            /**
+             * Check for range filtering
+             */
+            if(strpos($_GET["row"], "-") !== false) {
+                self::set_filter("range");
+            }
+        }
+
         /**
         * Last row number
         * Note: the first row is used for column title
@@ -217,7 +321,7 @@ class Agrovoc {
         */
         self::$highestRow = (int)XML::$worksheet->getHighestRow();
         /**
-        * Last excel column
+        * Last Excel column
         * @example "F"
         * @var string
         */
@@ -242,10 +346,25 @@ class Agrovoc {
         self::$data->{XML::$filename}->stats->columns->count = self::$highestColumnIndex;
         self::$data->{XML::$filename}->stats->columns->highest = self::$highestColumn;
         // Labels
-        self::$data->{XML::$filename}->stats->columns->_labels = self::recognise_label_keywords();
+        self::$data->{XML::$filename}->stats->columns->labels = self::recognise_label_keywords();
 
+        // Row statistics
         self::$data->{XML::$filename}->stats->rows = new stdClass();
-        self::$data->{XML::$filename}->stats->rows->count = self::$highestRow;
+        self::$data->{XML::$filename}->stats->rows->total = self::$highestRow;
+
+        if(isset($_GET["row"])) {
+            self::$data->{XML::$filename}->stats->rows->filter = new stdClass();
+
+            // Analyse the row request
+            self::analyse_row_request();
+
+            // Set stats
+            $_get = explode(",", $_GET["row"]);
+            sort($_get);
+            self::$data->{XML::$filename}->stats->rows->filter->requested = self::$filter . ": " . Obj::list(explode(", ", $_GET["row"]));
+            self::$data->{XML::$filename}->stats->rows->filter->unavailable = Obj::list(self::$unavailable_rows);
+            self::$data->{XML::$filename}->stats->rows->filter->available = Obj::list(self::$available_rows);
+        }
     }
 
     /**
@@ -260,17 +379,19 @@ class Agrovoc {
         $visible = ($is_visible) ? "visible" : "not visible";
 
         /**
-         * Because counters start from 0 but not in the excel file (which has also a row for labels),
+         * Because counters start from 0 but not in the Excel file (which has also a row for labels),
          * there's difference between row number displayed and really parsed from the file
          * So the first row of data is the number 2
          */
-        // The excel row number
+        // The Excel row number
         $index = (!$requested) ? $index + 1 : $index;
         // The displayed row number
         $i = (!$requested) ? $index : $index;
 
         if($i > 1 && $i <= self::$highestRow) {
-            self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i] = self::recognise_content_keywords($index);
+            $row_name = "row " . $i;
+            $dataset_api_url = "";
+            self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name] = self::recognise_content_keywords($index);
 
             for($col = 1; $col <= self::$highestColumnIndex; $col++) {
                 $title = XML::get_column_title($col);
@@ -282,39 +403,34 @@ class Agrovoc {
                     $id = substr(parse_url($value)["path"], 1);
                     $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=" . (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
 
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset = new stdClass();
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source = new stdClass();
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi = new stdClass();
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->target = new stdClass();
-
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->uri = parse_url($value);
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->uri["value"] = $value;
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->value = $id;
-                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->target->dataset_api_url = $dataset_api_url;
-
-                    // Download data only for visible rows
-                    if($is_visible) {
-                        // Download datasets only for first 3 rows
-                        $dataset = self::url_open($dataset_api_url);
-                        self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results = $dataset;
-
-                        /**
-                        * Assign new values
-                        */
-                       foreach(self::$data->{XML::$filename}->rows->{$visible}->contents as $row_name => $row_data) {
-                           self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results->data->latestVersion->metadataBlocks->citation->fields = self::generate_new_keywords_tree($row_data, $row_name);
-                       }
-                    }
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->target = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->uri = parse_url($value);
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->uri["value"] = $value;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->value = $id;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->target->dataset_api_url = $dataset_api_url;
                 }
             }
-            if(isset($_GET["only_fields"])) {
-                output((object)self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results->data->latestVersion->metadataBlocks->citation->fields, true);
-                exit();
+            trigger_error("[INFO] Detected API URL: {$dataset_api_url}", E_USER_NOTICE);
+
+            // Download data only for visible rows
+            if($is_visible) {
+                // Download datasets
+                $dataset = self::url_open($dataset_api_url);
+                self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results = $dataset;
+                /**
+                 * Assign new values
+                 */
+                $fields = self::generate_new_keywords_tree(self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name], $row_name);
+                self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results->data->latestVersion->metadataBlocks->citation->fields = $fields;
             }
+            $rows = self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results->data->latestVersion->metadataBlocks->citation->fields;
         }
-        // Report finished status
+        // Callback
         if(!$requested && $i <= (self::$highestRow - 1) || $requested && $i > 1 && $i <= self::$highestRow) {
-            return true;
+            return $rows;
         }
     }
 
@@ -322,7 +438,7 @@ class Agrovoc {
      * Parse the opened xml file by PHP Spreadsheet and do the job
      *
      * @param  array                            $filename                       The file to parse
-     * @param  array                            $parse_row                      The file to parse
+     * @param  integer|string                   $parse_row                      The row to parse. Can be single, separated by "," or with "-" for a range
      * @return object                                                           The result object
     */
     public static function parse_xml($filename, $parse_row) {
@@ -339,32 +455,95 @@ class Agrovoc {
         self::build_stats();
 
         if(!is_null($parse_row)) {
-            foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
-                if($row->getRowIndex() == (int)$parse_row) {
-                    $done = self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true);
+            // Check for multiple filtering
+            if(self::$filter == "multiple") {
+                $rows = explode(",", $parse_row);
+            }
+            // Check for range filtering
+            if(self::$filter == "range") {
+                for($i = self::$available_rows[0]; $i <= self::$available_rows[1]; $i++) {
+                    $rows[] = $i;
                 }
             }
 
-            if($done) {
+            $f = 0;
+            foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
+                $f++;
+                switch(self::$filter) {
+                    case "single":
+                        if($row->getRowIndex() == (int)$parse_row) {
+                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true);
+                        }
+                        break;
+                    case "multiple":
+                        if(in_array($row->getRowIndex(), $rows)) {
+                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true);
+                        }
+                        break;
+                    case "range":
+                        if(in_array($row->getRowIndex(), $rows)) {
+                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true);
+                        }
+                        break;
+                }
+            }
+            if(isset($extracted) && $extracted) {
+                trigger_error("--------------------------------------------------", E_USER_NOTICE);
+
                 // Save data
                 if(!isset($_GET["debug"])) {
-                    self::save(self::$data, "row_" . $parse_row);
+                    if(!isset($_GET["only_fields"])) {
+                        self::save(self::$data);
+                    } else {
+                        self::save((object)$extracted);
+                    }
+                }
+                // Output on screen
+                if(!isset($_GET["only_fields"])) {
+                    output(self::$data, true);
+                } else {
+                    output((object)$extracted, true);
+                }
+            } else {
+                // Output on screen
+                if(!isset($_GET["only_fields"])) {
+                    output(self::$data, true);
+                } else {
+                    output((object)$extracted, true);
                 }
             }
         } else {
             foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
-                $done = self::extract_data($row->getRowIndex(), XML::is_visible_row($row), false);
+                $extracted["row " . $row->getRowIndex()] = self::extract_data($row->getRowIndex(), XML::is_visible_row($row), false);
             }
 
-            if($done) {
+            if(isset($extracted) && $extracted) {
+                trigger_error("--------------------------------------------------", E_USER_NOTICE);
+
                 // Save data
                 if(!isset($_GET["debug"])) {
-                    self::save(self::$data);
+                    if(!isset($_GET["only_fields"])) {
+                        self::save(self::$data);
+                    } else {
+                        self::save((object)$extracted);
+                    }
+                }
+                if(!isset($_GET["only_fields"])) {
+                    output(self::$data, true);
+                } else {
+                    output((object)$extracted, true);
+                }
+            } else {
+                // Output on screen
+                if(!isset($_GET["only_fields"])) {
+                    output(self::$data, true);
+                } else {
+                    output((object)$extracted, true);
                 }
             }
         }
 
-        return self::$data;
+        // return self::$data;
     }
 }
 
