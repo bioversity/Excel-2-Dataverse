@@ -1,4 +1,23 @@
 <?php
+/**
+ * Bioversity AGROVOC Indexing
+ *
+ * PHP Version 7.2.11
+ *
+ * @copyright 2018 Bioversity International (http://www.bioversityinternational.org/)
+ * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ * @link https://github.com/gubi/bioversity_agrovoc-indexing
+*/
+
+/**
+ * A script for manage XML file and prepare data for Dataverse
+ *
+ * @package Bioversity AGROVOC Indexing
+ * @author Alessandro Gubitosi <a.gubitosi@cgiar.org>
+ * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ * @link https://github.com/gubi/bioversity_agrovoc-indexing
+*/
+
 require_once("vendor/autoload.php");
 require_once("XML.php");
 require_once("Obj.php");
@@ -16,9 +35,10 @@ class Agrovoc {
     public static $highestColumnIndex;
 
     /**
-    * Open an URL using cURL
-    * @param  string                           $url                             The given URL
-    * @return object                                                            A JSON decoded output
+     * Open an URL using cURL
+     *
+     * @param  string                           $url                            The given URL
+     * @return object                                                           A JSON decoded output
     */
     private static function url_open($url) {
         $logger = new Logger("agrovoc-indexing");
@@ -47,6 +67,7 @@ class Agrovoc {
 
     /**
     * Recognise keywords for the "label" section
+    *
     * @return array                                                             An array with "keywords" data
     */
     private static function recognise_label_keywords() {
@@ -71,7 +92,8 @@ class Agrovoc {
 
     /**
      * Recognise keywords for the "contents" section
-     * @param  integer                          $row                          The row number
+     *
+     * @param  integer                          $row                            The row number
      * @return array                                                            An array with "keywords" data
      */
     private static function recognise_content_keywords($row) {
@@ -95,9 +117,10 @@ class Agrovoc {
 
     /**
     * Create a new field value for Dataverse
-    * @param  object                           $field                           The field data
-    * @param  string                           $type                            The new field value key name
-    * @param  mixed                            $value                           The new field value data
+    *
+    * @param  object                            $field                          The field data
+    * @param  string                            $type                           The new field value key name
+    * @param  mixed                             $value                          The new field value data
     * @return object                                                            The object with new field data
     */
     private static function create_values($field, $type, $value) {
@@ -107,14 +130,18 @@ class Agrovoc {
             $old_values[] = isset($field_data->{$type}) ? trim($field_data->{$type}->value) : null;
 
             if(isset($field_data->{$type})) {
-                $field_data->{$type}->old_values = $old_values;
+                if(isset($_GET["debug"])) {
+                    $field_data->{$type}->old_values = $old_values;
+                }
                 $field_data->{$type}->value = trim($value);
             } else {
                 $field_data->{$type} = new stdClass();
                 $field_data->{$type}->typeName = $type;
                 $field_data->{$type}->multiple = false;
                 $field_data->{$type}->typeClass = "primitive";
-                $field_data->{$type}->old_values = null;
+                if(isset($_GET["debug"])) {
+                    $field_data->{$type}->old_values = null;
+                }
                 $field_data->{$type}->value = trim($value);
             }
         }
@@ -123,16 +150,24 @@ class Agrovoc {
         return $field_data;
     }
 
+    /**
+     * Generate the new keywords tree
+     *
+     * @param  object                           $row_data                       The object that contains the dataset
+     * @return object                                                           The object with new keywords data
+     */
     private function generate_new_keywords_tree($row_data, $row_name) {
         $a = [];
         if(isset($row_data->dataset)) {
+            trigger_error("[INFO] Parsing {$row_name}", E_USER_NOTICE);
             foreach($row_data->dataset->results->data->latestVersion->metadataBlocks->citation->fields as $k => $v) {
                 if($v->typeName == "keyword") {
                     $v->value[count($v->value)-1] = self::create_values($v->value, "keywordValue", isset($row_data->_keywords->value) ? $row_data->_keywords->value : null);
                     $v->value[count($v->value)-1] = self::create_values($v->value, "keywordVocabulary", isset($row_data->Vocabulary) ? $row_data->Vocabulary : null);
                     $v->value[count($v->value)-1] = self::create_values($v->value, "keywordVocabularyURI", isset($row_data->_keywords->uri) ? $row_data->_keywords->uri : null);
 
-                    $a[$k] = $v->value[count($v->value)-1];
+                    $v->value = [$v->value[count($v->value)-1]];
+                    $a[$k] = $v;
                 } else {
                     $a[$k] = $v;
                 }
@@ -142,39 +177,42 @@ class Agrovoc {
     }
 
     /**
-    * Save data to files
-    * @param  object                           $data                            The object to save
-    * @param  string                           $name                            The file name
-    * @param  boolean                          $force                           Force overwriting? Default false
+     * Save data to files
+     *
+     * @param  object                           $data                           The object to save
+     * @param  string                           $name                           The file name. Default is "output"
+     * @param  boolean                          $force                          Force overwriting? Default false
     */
     public static function save($data, $name = "output", $force = false) {
         if($force) {
             // Save the output as plain text object
-            file_put_contents(getcwd() . "/" . $name . ".txt", print_r($data, true));
+            file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
             // Save the output as json
-            file_put_contents(getcwd() . "/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+            file_put_contents(getcwd() . "/export/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
         } else {
             // Text file does not exists
-            if(!file_exists(getcwd() . "/" . $name . ".txt")) {
+            if(!file_exists(getcwd() . "/export/" . $name . ".txt")) {
                 // Save the output as plain text object
-                file_put_contents(getcwd() . "/" . $name . ".txt", print_r($data, true));
+                file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
             }
             // JSON file does not exists
-            if(!file_exists(getcwd() . "/" . $name . ".json")) {
+            if(!file_exists(getcwd() . "/export/" . $name . ".json")) {
                 // Save the output as json
-                file_put_contents(getcwd() . "/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+                file_put_contents(getcwd() . "/export/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
             }
         }
     }
 
 
-    public static function build_label_section() {
+    /* ---------------------------------------------------------------------- */
 
-    }
-
-    public static function build_stats() {
+    /**
+     * Create the stats section
+     */
+    private static function build_stats() {
         /**
         * Last row number
+        * Note: the first row is used for column title
         * @var integer
         */
         self::$highestRow = (int)XML::$worksheet->getHighestRow();
@@ -210,57 +248,82 @@ class Agrovoc {
         self::$data->{XML::$filename}->stats->rows->count = self::$highestRow;
     }
 
-    /* ---------------------------------------------------------------------- */
-
-    private static function extract_data($index, $is_visible, $requested) {
+    /**
+     * Extract data from the Internet
+     *
+     * @param  integer                          $index                          The desired row number
+     * @param  boolean                          $is_visible                     The row is visible?
+     * @param  boolean                          $requested                      Is requested a single row?
+     * @return boolean                                                          The executrion has done (default true)
+     */
+    private static function extract_data($index, $is_visible, $requested = false) {
         $visible = ($is_visible) ? "visible" : "not visible";
-        $index = ($requested) ? $index + 1 : $index;
-        $i = (!$requested) ? $index - 1: $index - 1;
 
-        self::$data->{XML::$filename}->contents["row " . $i] = self::recognise_content_keywords($index);
+        /**
+         * Because counters start from 0 but not in the excel file (which has also a row for labels),
+         * there's difference between row number displayed and really parsed from the file
+         * So the first row of data is the number 2
+         */
+        // The excel row number
+        $index = (!$requested) ? $index + 1 : $index;
+        // The displayed row number
+        $i = (!$requested) ? $index : $index;
 
-        for($col = 1; $col <= self::$highestColumnIndex; $col++) {
-            $title = XML::get_column_title($col);
-            $value = XML::get_cell_value($index, $col);
+        if($i > 1 && $i <= self::$highestRow) {
+            self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i] = self::recognise_content_keywords($index);
 
-            if($title == "id") {
-                // Match the schema (HDL or DOI)
-                $schema = (explode(".", parse_url($value)["host"])[0] == "hdl") ? "hdl" : "doi";
-                $id = substr(parse_url($value)["path"], 1);
-                $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=" . (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
+            for($col = 1; $col <= self::$highestColumnIndex; $col++) {
+                $title = XML::get_column_title($col);
+                $value = XML::get_cell_value($index, $col);
 
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset = new stdClass();
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->source = new stdClass();
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->source->doi = new stdClass();
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->target = new stdClass();
+                if($title == "id") {
+                    // Match the schema (HDL or DOI)
+                    $schema = (explode(".", parse_url($value)["host"])[0] == "hdl") ? "hdl" : "doi";
+                    $id = substr(parse_url($value)["path"], 1);
+                    $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=" . (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
 
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->source->doi->uri = parse_url($value);
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->source->doi->uri["value"] = $value;
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->source->doi->value = $id;
-                self::$data->{XML::$filename}->contents["row " . $i]->dataset->target->dataset_api_url = $dataset_api_url;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi = new stdClass();
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->target = new stdClass();
 
-                // Download data only for visible rows
-                if($is_visible) {
-                    // Download datasets only for first 3 rows
-                    $dataset = self::url_open($dataset_api_url);
-                    self::$data->{XML::$filename}->contents["row " . $i]->dataset->results = $dataset;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->uri = parse_url($value);
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->uri["value"] = $value;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->source->doi->value = $id;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->target->dataset_api_url = $dataset_api_url;
 
-                    /**
-                    * Assign new values
-                    */
-                   foreach(self::$data->{XML::$filename}->contents as $row_name => $row_data) {
-                       self::$data->{XML::$filename}->contents["row " . $i]->dataset->results->data->latestVersion->metadataBlocks->citation->fields = self::generate_new_keywords_tree($row_data, $row_name);
-                   }
+                    // Download data only for visible rows
+                    if($is_visible) {
+                        // Download datasets only for first 3 rows
+                        $dataset = self::url_open($dataset_api_url);
+                        self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results = $dataset;
+
+                        /**
+                        * Assign new values
+                        */
+                       foreach(self::$data->{XML::$filename}->rows->{$visible}->contents as $row_name => $row_data) {
+                           self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results->data->latestVersion->metadataBlocks->citation->fields = self::generate_new_keywords_tree($row_data, $row_name);
+                       }
+                    }
                 }
             }
+            if(isset($_GET["only_fields"])) {
+                output((object)self::$data->{XML::$filename}->rows->{$visible}->contents["row " . $i]->dataset->results->data->latestVersion->metadataBlocks->citation->fields, true);
+                exit();
+            }
+        }
+        // Report finished status
+        if(!$requested && $i <= (self::$highestRow - 1) || $requested && $i > 1 && $i <= self::$highestRow) {
+            return true;
         }
     }
 
     /**
-    * Parse the opened xml file by PHP Spreadsheet and do the job
-    * @param  array                            $filename                        The file to parse
-    * @param  array                            $parse_row                        The file to parse
-    * @return object                                                            The result object
+     * Parse the opened xml file by PHP Spreadsheet and do the job
+     *
+     * @param  array                            $filename                       The file to parse
+     * @param  array                            $parse_row                      The file to parse
+     * @return object                                                           The result object
     */
     public static function parse_xml($filename, $parse_row) {
         XML::$filename = $filename;
@@ -275,21 +338,30 @@ class Agrovoc {
          */
         self::build_stats();
 
-        self::build_label_section();
-
         if(!is_null($parse_row)) {
             foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
                 if($row->getRowIndex() == (int)$parse_row) {
-                    self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true);
+                    $done = self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true);
+                }
+            }
+
+            if($done) {
+                // Save data
+                if(!isset($_GET["debug"])) {
+                    self::save(self::$data, "row_" . $parse_row);
                 }
             }
         } else {
             foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
-                self::extract_data($row->getRowIndex(), XML::is_visible_row($row), false);
+                $done = self::extract_data($row->getRowIndex(), XML::is_visible_row($row), false);
             }
 
-            // Save data for future purposes
-            // self::save(self::$data);
+            if($done) {
+                // Save data
+                if(!isset($_GET["debug"])) {
+                    self::save(self::$data);
+                }
+            }
         }
 
         return self::$data;

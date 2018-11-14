@@ -1,17 +1,27 @@
 <?php
+/**
+ * Bioversity AGROVOC Indexing
+ *
+ * PHP Version 7.2.11
+ *
+ * @copyright 2018 Bioversity International (http://www.bioversityinternational.org/)
+ * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ * @link https://github.com/gubi/bioversity_agrovoc-indexing
+*/
 
-
-
-
-
-
-
-
-
+/**
+ * A script for manage XML file and prepare data for Dataverse
+ *
+ * @package Bioversity AGROVOC Indexing
+ * @author Alessandro Gubitosi <a.gubitosi@cgiar.org>
+ * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
+ * @link https://github.com/gubi/bioversity_agrovoc-indexing
+*/
 
 class Obj {
     /**
      * Convert an array to an object
+     *
      * @param  array                            $array                          The array to convert
      * @return object                                                           The converted object
      */
@@ -21,6 +31,7 @@ class Obj {
 
     /**
      * Convert an object to an array
+     *
      * @param  object                           $object                         The object to convert
      * @return object                                                           The converted array
      */
@@ -30,6 +41,7 @@ class Obj {
 
     /**
      * Move an array item to the top of order
+     *
      * @param  array                            $array                          The array to sort
      * @param  string                           $key                            The item to move to the top
      * @return array                                                            The sorted array
@@ -40,6 +52,7 @@ class Obj {
 
     /**
      * Move an array item to the bottom of order
+     * 
      * @param  array                            $array                          The array to sort
      * @param  string                           $key                            The item to move to the bottom
      * @return array                                                            The sorted array
