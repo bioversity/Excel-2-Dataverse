@@ -76,6 +76,6 @@ Example commands:
 
 [`http://dataverse.local/`](http://dataverse.local/)<br />This address generates the `output.json` and `output.txt`, with all rows of the excel file.
 
-[`http://dataverse.local/?row=50,51`](http://dataverse.local/?row=50,51)<br />This address display and save the output only for rows 50 and 51.
+[`http://dataverse.local/?row=2`](http://dataverse.local/?row=2)<br />This address display and save the output only for row 2.
 
-[`http://dataverse.local/?debug&only_fields&row=3-5`](http://dataverse.local/?debug&only_fields&row=3-5)<br />This address display the output of rows from 3 to 5, with only the fields section and without saving the output locally.
+[`http://dataverse.local/?debug&only_fields&row=2-10`](http://dataverse.local/?debug&only_fields&row=2-10)<br />This address display the output of rows from 2 to 10, with only the fields section and without saving the output locally.
