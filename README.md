@@ -3,8 +3,19 @@
 This script parse an Excel file and convert all data for Dataverse edit/update.
 
 ### Installation
-
 Note: This script need a webserver to run, so you can create a local domain to use every time you need.
+
+##### Requirements
+PHP version 7.2 with the following modules:
+* php7.2-curl
+* php7.2-dev
+* php7.2-json
+* php7.2-xml
+* php7.2-zip
+
+``` shell
+$ apt-get install php7.2 php7.2-common php7.2-curl php7.2-dev php7.2-json php7.2-xml php7.2-zip
+```
 
 ##### Clone or download this repository:
 
