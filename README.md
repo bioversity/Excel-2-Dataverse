@@ -36,13 +36,13 @@ NameVirtualHost dataverse.local:80
 
         #LogLevel info ssl:warn
 
-        ErrorLog ${APACHE_LOG_DIR}/error.excel2ataverse.log
-        CustomLog ${APACHE_LOG_DIR}/access.excel2ataverse.log combined
+        ErrorLog ${APACHE_LOG_DIR}/error.excel2dataverse.log
+        CustomLog ${APACHE_LOG_DIR}/access.excel2dataverse.log combined
 
         #Include conf-available/serve-cgi-bin.conf
 
-        DocumentRoot /var/www/bioversity/excel2ataverse
-        <Directory /var/www/bioversity/excel2ataverse>
+        DocumentRoot /var/www/bioversity/excel2dataverse
+        <Directory /var/www/bioversity/excel2dataverse>
             Options Indexes FollowSymLinks MultiViews
             AllowOverride All
             Order allow,deny
@@ -58,7 +58,7 @@ NameVirtualHost dataverse.local:80
 server {
     listen 80;
     server_name dataverse.local;
-    root /var/www/bioversity/excel2ataverse;
+    root /var/www/bioversity/excel2dataverse;
 }
 
 ```
