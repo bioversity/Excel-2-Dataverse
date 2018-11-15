@@ -373,9 +373,9 @@ class Agrovoc {
             // Set stats
             $_get = explode(",", $_GET["row"]);
             sort($_get);
-            self::$data->{XML::$filename}->stats->rows->filter->requested = self::$filter . ": " . Obj::vvv(explode(", ", $_GET["row"]));
-            self::$data->{XML::$filename}->stats->rows->filter->unavailable = Obj::vvv(self::$unavailable_rows);
-            self::$data->{XML::$filename}->stats->rows->filter->available = Obj::vvv(self::$available_rows);
+            self::$data->{XML::$filename}->stats->rows->filter->requested = self::$filter . ": " . Obj::list(explode(", ", $_GET["row"]));
+            self::$data->{XML::$filename}->stats->rows->filter->unavailable = Obj::list(self::$unavailable_rows);
+            self::$data->{XML::$filename}->stats->rows->filter->available = Obj::list(self::$available_rows);
         }
     }
 
