@@ -4,15 +4,13 @@ This script parse an Excel file and convert all data for Dataverse edit/update.
 
 ### Installation
 
-Note: PHP need a webserver to run.
+Note: This script need a webserver to run, so you can create a local domain to use every time you need.
 
-Clone or download this repository:
+##### Clone or download this repository:
 
 ```bash
 $ git clone https://github.com/gubi/bioversity_agrovoc-indexing.git
 ```
-
-Run on your local server.
 
 ##### Create a local domain
 
@@ -24,7 +22,7 @@ If you want to leave the `localhost` address free, you can set a new local domai
 
 ##### Setup the webserver
 
-Following a sample couple configurations:
+Following sample configurations:
 
 ###### Apache
 
@@ -69,7 +67,10 @@ server {
 
 When launched the script check previously exported files in the directory `export`, if not present it generates.
 
-The script accept GET parameters, so you can play with the address bar adding the following parameters:* `row`: **Row filter**<br />Use this parameter to filter rows. Values can be a single row number (eg. `2`), a list of rows (eg: `2,3,4,10`) or a range (eg. `2-10`\)* `debug`: **Debug mode**<br />In debug mode no files will be generated and also append "old_values" into the output tree* `only_fields`: **Only fields tree**<br />With this parameter the script generates only the tree with data present in `dataset > results > data > latestVersion > metadataBlocks > citation > fields`
+The script accept GET parameters, so you can play with the address bar adding the following parameters:
+* `row`: **Row filter**<br />Use this parameter to filter rows. Values can be a single row number (eg. `2`), a list of rows (eg: `2,3,4,10`) or a range (eg. `2-10`\)
+* `debug`: **Debug mode**<br />In debug mode no files will be generated and also append "old_values" into the output tree
+* `only_fields`: **Only fields tree**<br />With this parameter the script generates only the tree with data present in `dataset > results > data > latestVersion > metadataBlocks > citation > fields`
 
 Example commands:
 
