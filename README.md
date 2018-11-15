@@ -9,7 +9,7 @@ Note: This script need a webserver to run, so you can create a local domain to u
 ##### Clone or download this repository:
 
 ```bash
-$ git clone https://github.com/gubi/bioversity_agrovoc-indexing.git
+$ git clone https://github.com/bioversity/Excel-2-Dataverse.git
 ```
 
 ##### Create a local domain
