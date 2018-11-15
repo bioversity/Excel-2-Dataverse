@@ -26,7 +26,7 @@ class Obj {
      * @param  int|array                        $array                          The array to display
      * @return int|string                                                       An integer or a string describing the array elements or
      */
-    public static function list($array) {
+    public static function vvv($array) {
         if(is_array($array)) {
             sort($array);
         }
