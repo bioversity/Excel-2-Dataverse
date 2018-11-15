@@ -17,7 +17,7 @@ $ git clone https://github.com/bioversity/Excel-2-Dataverse.git
 If you want to leave the `localhost` address free, you can set a new local domain by appending this line in the `/etc/hosts`:
 
 ```config
-127.0.1.1               dataverse.local
+127.0.1.1               excel2dataverse.local
 ```
 
 ##### Setup the webserver
@@ -28,10 +28,10 @@ Following sample configurations:
 
 ```config
 
-NameVirtualHost dataverse.local:80
+NameVirtualHost excel2dataverse.local:80
 
-<VirtualHost dataverse.local:80>
-        ServerName dataverse.local
+<VirtualHost excel2dataverse.local:80>
+        ServerName excel2dataverse.local
         ServerAdmin webmaster@localhost
 
         #LogLevel info ssl:warn
@@ -57,7 +57,7 @@ NameVirtualHost dataverse.local:80
 ```config
 server {
     listen 80;
-    server_name dataverse.local;
+    server_name excel2dataverse.local;
     root /var/www/bioversity/excel2dataverse;
 }
 
@@ -74,8 +74,8 @@ The script accept GET parameters, so you can play with the address bar adding th
 
 Example commands:
 
-[`http://dataverse.local/`](http://dataverse.local/)<br />This address generates the `output.json` and `output.txt` of the entire excel file.
+[`http://excel2dataverse.local/`](http://excel2dataverse.local/)<br />This address generates the `output.json` and `output.txt` of the entire excel file.
 
-[`http://dataverse.local/?row=2`](http://dataverse.local/?row=2)<br />This address display and save the output only for row 2.
+[`http://dataverse.local/?row=2`](http://excel2dataverse.local/?row=2)<br />This address display and save the output only for row 2.
 
-[`http://dataverse.local/?debug&only_fields&row=2-10`](http://dataverse.local/?debug&only_fields&row=2-10)<br />This address display the output of rows from 2 to 10, with only the fields section and without saving the output locally.
+[`http://excel2dataverse.local/?debug&only_fields&row=2-10`](http://excel2dataverse.local/?debug&only_fields&row=2-10)<br />This address display the output of rows from 2 to 10, with only the fields section and without saving the output locally.
