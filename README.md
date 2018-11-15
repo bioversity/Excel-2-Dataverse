@@ -1,4 +1,4 @@
-### AGROVOC Indexing
+### Excel 2 Dataverse
 
 This script parse an Excel file and convert all data for Dataverse edit/update.
 
