@@ -76,12 +76,19 @@ class Agrovoc {
 
     /**
      * Set a selected row filter
+     *
      * @param string                            $filter                         The filter to select. Can be "single" (default), "multiple" or "range"
      */
     private function set_filter($filter) {
         self::$filter = $filter;
     }
 
+    /**
+     * Se globally the row availability and unavailability
+     *
+     * @param int|string                        $available                      Available row(s)
+     * @param int|string                        $unavailable                    Unavailable row(s)
+     */
     private function set_row_availability($available, $unavailable) {
         self::$available_rows = $available;
         self::$unavailable_rows = $unavailable;
@@ -226,6 +233,11 @@ class Agrovoc {
 
     /* ---------------------------------------------------------------------- */
 
+    /**
+     * Analyse the GET requests
+     *
+     * @return array                                                            An array with available and not-available rows
+     */
     private static function analyse_row_request() {
         $filter = [];
         switch(self::$filter) {
@@ -442,6 +454,7 @@ class Agrovoc {
      * @return object                                                           The result object
     */
     public static function parse_xml($filename, $parse_row) {
+        trigger_error("[INFO] Starting...", E_USER_NOTICE);
         XML::$filename = $filename;
 
         /**

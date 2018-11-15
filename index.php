@@ -55,7 +55,6 @@ if(file_exists(getcwd() . "/export/{$check_file}.json")) {
         }
     }
 } else {
-    trigger_error("[INFO] Starting...", E_USER_NOTICE);
     /**
     * Parse the excel file
     */

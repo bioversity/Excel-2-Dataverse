@@ -19,6 +19,13 @@
 */
 
 class Obj {
+    /**
+     * Sort and list all array items in human readable format
+     * @example [1, 3, 2] ==> 1, 2 and 3
+     *
+     * @param  int|array                        $array                          The array to display
+     * @return int|string                                                       An integer or a string describing the array elements or
+     */
     public static function list($array) {
         if(is_array($array)) {
             sort($array);
