@@ -68,7 +68,7 @@ server {
 When launched the script check previously exported files in the directory `export`, if not present it generates.
 
 The script accept GET parameters, so you can play with the address bar adding the following parameters:
-* `row`: **Row filter**<br />Use this parameter to filter rows. Values can be a single row number (eg. `2`), a list of rows (eg: `2,3,4,10`) or a range (eg. `2-10`\)
+* `row`: **Row filter**<br />Use this parameter to filter rows. Values can be a single row number (eg. `2`), a list of rows (eg: `2,3,4,10`) or a range (eg. `2-10`\).<br />__Note__: The first row is used for column titles so is not available.<br />Check the output statistics in the `rows > filter` section.
 * `debug`: **Debug mode**<br />In debug mode no files will be generated and also append "old_values" into the output tree
 * `only_fields`: **Only fields tree**<br />With this parameter the script generates only the tree with data present in `dataset > results > data > latestVersion > metadataBlocks > citation > fields`
 
