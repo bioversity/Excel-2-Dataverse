@@ -74,7 +74,7 @@ The script accept GET parameters, so you can play with the address bar adding th
 
 Example commands:
 
-[`http://dataverse.local/`](http://dataverse.local/)<br />This address generates the `output.json` and `output.txt`, with all rows of the excel file.
+[`http://dataverse.local/`](http://dataverse.local/)<br />This address generates the `output.json` and `output.txt` of the entire excel file.
 
 [`http://dataverse.local/?row=2`](http://dataverse.local/?row=2)<br />This address display and save the output only for row 2.
 
