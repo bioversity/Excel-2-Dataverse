@@ -46,8 +46,8 @@ $check_file = ((!is_null($parse_row)) ? "row_" . $parse_row : "output") . ((isse
 define("SOURCE", "resultAgrovoc_filled_20181108.xlsx");
 define("FILENAME", $check_file);
 define("STRIP_PREFIX", $strip_prefix);
-define("APITEST_KEY", "3e8b9d00-e7d4-4100-baf6-6210223591f1");
-define("HARVARD_KEY", "5b5a6e0e-b5f2-4f07-87c1-6e10f67784b7");
+define("APITEST_KEY", "<YOUR-KEY>");
+define("HARVARD_KEY", "<YOUR-KEY>");
 define("TARGET_SERVER", "https://apitest.dataverse.org");
 
 
