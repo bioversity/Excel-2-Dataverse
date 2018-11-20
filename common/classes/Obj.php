@@ -4,7 +4,7 @@
  *
  * PHP Version 7.2.11
  *
- * @copyright 2018 Bioversity International (http://www.bioversityinternational.org/)
+ * @copyright
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
@@ -29,9 +29,9 @@ class Obj {
     public static function list($array) {
         if(is_array($array)) {
             sort($array);
+            $res = preg_replace('/\,\s+(\w+)$/', " and $1", implode(", ", $array));
+            return (is_numeric($res)) ? (int)$res : $res;
         }
-        $res = preg_replace('/\,\s+(\w+)$/', " and $1", implode(", ", $array));
-        return (is_numeric($res)) ? (int)$res : $res;
     }
 
     /**
@@ -77,6 +77,28 @@ class Obj {
             $array = object_to_array($array);
         }
         return $array + array_splice($array, array_search($key, array_keys($array)), 1);
+    }
+
+    /**
+     * Display data on screen
+     *
+     * @param  string|object|array              $data                           What to display
+     * @param  boolean                          $json                           Display as JSON?
+     */
+    function output($data, $json = false) {
+        if($json) {
+            // Display the output as json
+            header("Content-type: application/json");
+            // print_r(json_encode($changes, JSON_PRETTY_PRINT));
+            if(is_array($data)) {
+                print_r(json_encode($data, JSON_PRETTY_PRINT));
+            } else {
+                print_r($data);
+            }
+        } else {
+            header("Content-type: text/plain");
+            print_r($data);
+        }
     }
 }
 

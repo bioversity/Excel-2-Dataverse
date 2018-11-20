@@ -4,7 +4,7 @@
  *
  * PHP Version 7.2.11
  *
- * @copyright 2018 Bioversity International (http://www.bioversityinternational.org/)
+ * @copyright
  * @license http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License, version 3
  * @link https://github.com/gubi/bioversity_agrovoc-indexing
 */
@@ -33,6 +33,7 @@ class Agrovoc {
     public static $highestRow;
     public static $highestColumn;
     public static $highestColumnIndex;
+    public static $persistentId;
     /**
      * Filtering status
      * Can be "single" (default), "multiple" or "range"
@@ -41,6 +42,7 @@ class Agrovoc {
     public static $filter = "single";
     public static $available_rows;
     public static $unavailable_rows;
+    private static $export_extensions = ["txt", "json"];
 
     /**
      * Open an URL using cURL
@@ -55,8 +57,9 @@ class Agrovoc {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLINFO_HEADER_OUT, true);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_VERBOSE,true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_VERBOSE, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ["X-Dataverse-key:" . HARVARD_KEY]);
 
         $output = json_decode(curl_exec($ch));
         $output->headers = @curl_getinfo($ch);
@@ -181,6 +184,7 @@ class Agrovoc {
      * Generate the new keywords tree
      *
      * @param  object                           $row_data                       The object that contains the dataset
+     * @param  object                           $row_name                       The row name (typically "row <nr>")
      * @return object                                                           The object with new keywords data
      */
     private function generate_new_keywords_tree($row_data, $row_name) {
@@ -204,34 +208,88 @@ class Agrovoc {
     }
 
     /**
+     * Check the file extension availability before save
+     * @uses self::$export_extensions
+     *
+     * @param  string                           $extension                      The file extension
+     * @return bool                                                             True if the extension is allowed
+     */
+    private static function check_extension_before_save($extension) {
+        if(in_array($extension, self::$export_extensions)) {
+            return true;
+        }
+    }
+
+    /**
      * Save data to files
      *
      * @param  object                           $data                           The object to save
      * @param  string                           $name                           The file name. Default is "output"
      * @param  boolean                          $force                          Force overwriting? Default false
+     * @param  string                           $extensions                     The desired extension
     */
-    public static function save($data, $name = FILENAME, $force = false) {
-        if($force) {
-            // Save the output as plain text object
-            file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
-            // Save the output as json
-            file_put_contents(getcwd() . "/export/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+    public static function save($data, $name = FILENAME, $force = false, $extensions = "json") {
+        if(!$force) {
+            if(self::check_extension_before_save($extensions)) {
+                // Text file does not exists
+                if(!file_exists(getcwd() . "/export/" . $name . ".txt")) {
+                    if(is_array($extensions) && in_array("txt", $extensions) || $extensions == "txt") {
+                        // Save the output as plain text object
+                        file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
+                    }
+                }
+                // JSON file does not exists
+                if(!file_exists(getcwd() . "/export/" . $name . ".json")) {
+                    if(is_array($extensions) && in_array("json", $extensions) || $extensions == "json") {
+                        // Save the output as json
+                        if(is_array($data) || is_object($data)) {
+                            $data = json_encode($data);
+                        }
+                        file_put_contents(getcwd() . "/export/" . $name . ".json", $data);
+                    }
+                }
+            }
         } else {
-            // Text file does not exists
-            if(!file_exists(getcwd() . "/export/" . $name . ".txt")) {
+            if(self::check_extension_before_save($extensions)) {
+                $extensions = array_intersect($extensions, self::$export_extensions);
+            }
+            if(is_array($extensions) && in_array("txt", $extensions) || $extensions == "txt") {
                 // Save the output as plain text object
                 file_put_contents(getcwd() . "/export/" . $name . ".txt", print_r($data, true));
             }
-            // JSON file does not exists
-            if(!file_exists(getcwd() . "/export/" . $name . ".json")) {
+            if(is_array($extensions) && in_array("json", $extensions) || $extensions == "json") {
                 // Save the output as json
-                file_put_contents(getcwd() . "/export/" . $name . ".json", json_encode($data, JSON_PRETTY_PRINT));
+                if(is_array($data) || is_object($data)) {
+                    $data = json_encode($data);
+                }
+                file_put_contents(getcwd() . "/export/" . $name . ".json", $data);
             }
         }
     }
 
 
     /* ---------------------------------------------------------------------- */
+
+    /**
+     * Get the persistentId
+     *
+     * @return string                                                           The persistentId
+     */
+    public static function get_persistendId() {
+        return self::$persistentId;
+    }
+
+    /**
+     * Build the Dataset API URL
+     *
+     * @param  string                           $server                         The host server
+     * @param  string                           $persistentId                   The persistentId
+     * @param  string                           $key                            The server token key
+     * @return string                                                           The Dataset API URL
+     */
+    public static function build_dataset_api_url($server, $persistentId, $key = "") {
+        return $server . "/api/datasets/:persistentId?" . (isset($key) ? "key=" . $key . "&" : "") . "persistentId=" . $persistentId;
+    }
 
     /**
      * Analyse the GET requests
@@ -294,7 +352,7 @@ class Agrovoc {
                         if((int)$row > 1 && (int)$row <= self::$highestRow) {
                             $filter["available"] = $rows;
                         }
-                        self::set_row_availability($filter["available"], $filter["unavailable"]);
+                        self::set_row_availability(@$filter["available"], @$filter["unavailable"]);
                     }
                 }
             }
@@ -385,9 +443,10 @@ class Agrovoc {
      * @param  integer                          $index                          The desired row number
      * @param  boolean                          $is_visible                     The row is visible?
      * @param  boolean                          $requested                      Is requested a single row?
-     * @return boolean                                                          The executrion has done (default true)
+     * @param  boolean                          $strip_prefix                   Strip the prefixed JSON tree?
+     * @return object                                                           The extracted data
      */
-    private static function extract_data($index, $is_visible, $requested = false) {
+    private static function extract_data($index, $is_visible, $requested = false, $strip_prefix = false) {
         $visible = ($is_visible) ? "visible" : "not visible";
 
         /**
@@ -413,7 +472,8 @@ class Agrovoc {
                     // Match the schema (HDL or DOI)
                     $schema = (explode(".", parse_url($value)["host"])[0] == "hdl") ? "hdl" : "doi";
                     $id = substr(parse_url($value)["path"], 1);
-                    $dataset_api_url = "https://dataverse.harvard.edu/api/datasets/:persistentId?persistentId=" . (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
+                    self::$persistentId = (($schema == "hdl") ? "hdl" : "doi") . ":" . $id;
+                    $dataset_api_url = self::build_dataset_api_url("https://dataverse.harvard.edu/", self::$persistentId);
 
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset = new stdClass();
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source = new stdClass();
@@ -422,6 +482,7 @@ class Agrovoc {
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->uri = parse_url($value);
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->uri["value"] = $value;
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->source->doi->value = $id;
+                    self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->target->persistentId = self::$persistentId;
                     self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->target->dataset_api_url = $dataset_api_url;
                 }
             }
@@ -439,10 +500,15 @@ class Agrovoc {
                 self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results->data->latestVersion->metadataBlocks->citation->fields = $fields;
             }
             $rows = self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results->data->latestVersion->metadataBlocks->citation->fields;
+            $metadataBlocks = (object)["datasetVersion" => self::$data->{XML::$filename}->rows->{$visible}->contents[$row_name]->dataset->results->data->latestVersion];
         }
         // Callback
         if(!$requested && $i <= (self::$highestRow - 1) || $requested && $i > 1 && $i <= self::$highestRow) {
-            return $rows;
+            if($strip_prefix) {
+                return $metadataBlocks;
+            } else {
+                return $rows;
+            }
         }
     }
 
@@ -451,9 +517,11 @@ class Agrovoc {
      *
      * @param  array                            $filename                       The file to parse
      * @param  integer|string                   $parse_row                      The row to parse. Can be single, separated by "," or with "-" for a range
+     * @param  boolean                          $output                         Display the output on screen?
+     * @param  boolean                          $strip_prefix                   Strip the prefixed JSON tree?
      * @return object                                                           The result object
     */
-    public static function parse_xml($filename, $parse_row) {
+    public static function parse_xml($filename, $parse_row, $output = false, $strip_prefix = false) {
         trigger_error("[INFO] Starting...", E_USER_NOTICE);
         XML::$filename = $filename;
 
@@ -468,6 +536,7 @@ class Agrovoc {
         self::build_stats();
 
         if(!is_null($parse_row)) {
+            $extracted = [];
             // Check for multiple filtering
             if(self::$filter == "multiple") {
                 $rows = explode(",", $parse_row);
@@ -482,81 +551,92 @@ class Agrovoc {
             $f = 0;
             foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
                 $f++;
+                $key = ($strip_prefix) ? "row " . $row->getRowIndex() : "";
                 switch(self::$filter) {
                     case "single":
                         if($row->getRowIndex() == (int)$parse_row) {
-                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true);
+                            $extracted[$key] = self::extract_data((int)$parse_row, XML::is_visible_row((int)$parse_row), true, $strip_prefix);
+
+                            // Save data
+                            if(!isset($_GET["debug"])) {
+                                if(isset($_GET["only_fields"])) {
+                                    self::save((object)$extracted[$key], $key);
+                                }
+                            }
                         }
                         break;
                     case "multiple":
                         if(in_array($row->getRowIndex(), $rows)) {
-                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true);
+                            $extracted[$key] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true, $strip_prefix);
+
+                            // Save data
+                            if(!isset($_GET["debug"])) {
+                                if(isset($_GET["only_fields"])) {
+                                    self::save((object)$extracted[$key], $key);
+                                }
+                            }
                         }
                         break;
                     case "range":
                         if(in_array($row->getRowIndex(), $rows)) {
-                            $extracted["row " . $row->getRowIndex()] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true);
+                            $extracted[$key] = self::extract_data((int)$row->getRowIndex(), XML::is_visible_row((int)$row->getRowIndex()), true, $strip_prefix);
+
+                            // Save data
+                            if(!isset($_GET["debug"])) {
+                                if(isset($_GET["only_fields"])) {
+                                    self::save((object)$extracted[$key], $key);
+                                }
+                            }
                         }
                         break;
                 }
             }
-            if(isset($extracted) && $extracted) {
+            if(!isset($extracted) && !$extracted) {
                 trigger_error("--------------------------------------------------", E_USER_NOTICE);
 
-                // Save data
-                if(!isset($_GET["debug"])) {
-                    if(!isset($_GET["only_fields"])) {
-                        self::save(self::$data);
-                    } else {
-                        self::save((object)$extracted);
-                    }
-                }
                 // Output on screen
-                if(!isset($_GET["only_fields"])) {
-                    output(self::$data, true);
-                } else {
-                    output((object)$extracted, true);
+                if($output) {
+                    self::save(self::$data);
+                    Obj::output(self::$data, true);
                 }
             } else {
                 // Output on screen
-                if(!isset($_GET["only_fields"])) {
-                    output(self::$data, true);
-                } else {
-                    output((object)$extracted, true);
+                if($output) {
+                    Obj::output(self::$data, true);
+                    Obj::output((object)$extracted, true);
                 }
             }
         } else {
             foreach(XML::$spreadsheet->getActiveSheet()->getRowIterator() as $row) {
                 $extracted["row " . $row->getRowIndex()] = self::extract_data($row->getRowIndex(), XML::is_visible_row($row), false);
+                // Save data
+                if(!isset($_GET["debug"])) {
+                    self::save((object)$extracted[$key], $key);
+                }
             }
 
             if(isset($extracted) && $extracted) {
                 trigger_error("--------------------------------------------------", E_USER_NOTICE);
 
-                // Save data
-                if(!isset($_GET["debug"])) {
-                    if(!isset($_GET["only_fields"])) {
-                        self::save(self::$data);
-                    } else {
-                        self::save((object)$extracted);
-                    }
-                }
-                if(!isset($_GET["only_fields"])) {
-                    output(self::$data, true);
-                } else {
-                    output((object)$extracted, true);
+                // Output on screen
+                if($output) {
+                    self::save(self::$data);
+                    Obj::output(self::$data, true);
                 }
             } else {
                 // Output on screen
-                if(!isset($_GET["only_fields"])) {
-                    output(self::$data, true);
-                } else {
-                    output((object)$extracted, true);
+                if($output) {
+                    Obj::output(self::$data, true);
+                    Obj::output((object)$extracted, true);
                 }
             }
         }
 
-        // return self::$data;
+        if(!isset($_GET["only_fields"])) {
+            return self::$data;
+        } else {
+            return (object)$extracted;
+        }
     }
 }
 

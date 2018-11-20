@@ -1,4 +1,8 @@
 
+dataverse-php-library/
+export/
+
+__index.php
 .~lock.*
 composer.lock
 curl.log
