@@ -9,6 +9,7 @@
     ],
     "require": {
         "phpoffice/phpspreadsheet": "^1.5",
-        "monolog/monolog": "^1.23"
+        "monolog/monolog": "^1.23",
+        "dataverse/php-library": "^1.0"
     }
 }
